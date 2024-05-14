@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Spotify Clone</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -33,7 +33,7 @@
           <div class="col-2 flex-column">
             <!-- SECTION HOME&SEARCH&LIBRARY-->
             <div class="row flex-column">
-              <div class="col py-4 bg-tertiary rounded-5">
+              <div class="col py-4 bg-tertiary rounded-5 mt-3">
                 <p class="d-flex align-items-center ms-3">
                   <a class="text-decoration-none text-light" href="">
                     <svg
@@ -52,8 +52,8 @@
                     <span class="ms-2">Home</span>
                   </a>
                 </p>
-                <p class="d-flex align-items-center ms-3">
-                  <a class="text-decoration-none text-light" href="">
+                <p class="d-flex align-items-center ms-3" id="searchButtonIcon">
+                  <a class="text-decoration-none text-light" href="#">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="28"
@@ -91,7 +91,7 @@
               </div>
               <!-- ALTRA SEZIONE -->
               <div class="col mt-3 bg-tertiary rounded-5">
-                <p class="d-flex align-items-center ms-3 mb-0 mt-2">
+                <p class="d-flex align-items-center ms-3 mb-0 mt-4">
                   <a class="text-decoration-none text-light" href="">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +131,7 @@
                   </a>
                 </p>
 
-                <p class="d-flex align-items-center ms-3 mt-3">
+                <p class="d-flex align-items-center ms-3 mt-3 mb-4">
                   <a class="text-decoration-none text-light" href="">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +152,7 @@
             </div>
             <!-- SECTION PLAYLIST -->
             <div class="row flex-column bg-tertiary rounded-5 mt-3">
-              <ul class="col list-unstyled">
+              <ul class="col list-unstyled mt-2">
                 <li>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </li>
@@ -236,13 +236,14 @@
                     />
                   </svg>
                 </button>
-                <div class="ms-3 rounded-5">
+                <div class="ms-3 rounded-5 invisible" id="SearchInput">
                   <div class="input-icons d-flex">
                     <i
                       class="bi bi-search text-light align-self-center ps-2 mt-2"
                     ></i>
                     <input
                       class="input-field bg-tertiary border border-0 text-light ps-4 rounded-5 mt-2"
+                      id="inputText"
                       type="text"
                       placeholder="Cosa vuoi ascoltare?"
                     />
@@ -267,7 +268,7 @@
                     />
                   </svg>
                 </button>
-                <button class="btn btn-tertiary rowsvg">
+                <button class="btn btn-tertiary rowsvg" id="peopleButton">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="28"
@@ -309,7 +310,91 @@
             </div>
           </div>
           <!-- RIGHT SECTION-->
-          <div class="col d-none"></div>
+          <div class="col-2 mt-4 bg-tertiary rounded-3" id="rightBar">
+            <div class="container-fluid mt-4 px-1">
+              <div class="row">
+                <div class="col-12 d-flex justify-content-between">
+                  <p>Attività amici</p>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-person-add"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+                      />
+                      <path
+                        d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      fill="currentColor"
+                      class="bi bi-x"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <!--CARD AMICICINI DEL CUORE -->
+                  <div class="card bg-transparent text-light">
+                    <div class="row no-gutters">
+                      <div class="col-2">
+                        <img
+                          class="rounded-circle card-img-top"
+                          src="https://scontent.fsuf1-1.fna.fbcdn.net/v/t1.6435-9/40678036_462016784282572_3799247676843753472_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=AUlywpO50nQQ7kNvgF7gCdL&_nc_ht=scontent.fsuf1-1.fna&oh=00_AYD2qln9_UrBF8JJyP8g2aNboMYBoFQuEVOkWx9vGY2FYQ&oe=666A9721"
+                          alt="Suresh Dasari Card"
+                        />
+                      </div>
+                      <div class="col-10">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between">
+                            <h5 class="card-title">John Doe</h5>
+                            <p>2 giorni</p>
+                          </div>
+                          <div class="d-flex">
+                            <a href="#">Nome Canzone</a>
+                            <p>°</p>
+                            <a href="#">Nome Album</a>
+                          </div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-music-note-beamed"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13s1.12-2 2.5-2 2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              d="M14 11V2h1v9zM6 3v10H5V3z"
+                            />
+                            <path
+                              d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4z"
+                            />
+                          </svg>
+                          <a href="#">Nome Playlist</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -326,5 +411,6 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/homepage.js"></script>
   </body>
 </html>
