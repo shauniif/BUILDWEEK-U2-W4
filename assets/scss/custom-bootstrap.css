@@ -12153,15 +12153,47 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/**** BARRA SCORRIMENTO CUSTOMIZZATA****/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
+  border-radius: 3em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 body {
   font-family: "Circular" !important;
 }
 
+/*** ICONA CUORE***/
 #icon-heart {
   background: rgb(72, 38, 177);
   background: linear-gradient(131deg, rgb(72, 38, 177) 3%, rgb(75, 44, 174) 4%, rgb(75, 45, 173) 7%, rgb(80, 57, 167) 10%, rgb(81, 60, 165) 12%, rgb(81, 60, 165) 14%, rgb(79, 55, 168) 16%, rgb(81, 60, 165) 18%, rgb(82, 61, 164) 21%, rgb(82, 62, 164) 23%, rgb(85, 69, 161) 25%, rgb(84, 67, 162) 25%, rgb(86, 70, 160) 28%, rgb(86, 72, 159) 30%, rgb(87, 76, 157) 33%, rgb(87, 76, 157) 34%, rgb(87, 75, 157) 35%, rgb(88, 77, 156) 40%, rgb(88, 77, 156) 42%, rgb(88, 76, 157) 45%, rgb(88, 77, 156) 48%, rgb(94, 89, 149) 50%, rgb(94, 89, 149) 53%, rgb(94, 89, 149) 55%, rgb(115, 110, 162) 59%, rgb(126, 121, 169) 65%, rgb(158, 154, 190) 72%, rgb(255, 251, 251) 83%);
 }
 
+/** PLAYLIST BAR*/
+#listPlaylist {
+  height: auto;
+}
+#listPlaylist div {
+  height: 50vh;
+}
+
+/**** IMG USER ***/
 #button-img {
   background-image: url("https://i.pinimg.com/originals/67/ac/14/67ac14198bd1b4745d820e94ef4b07e2.jpg");
   background-size: contain;
@@ -12169,6 +12201,7 @@ body {
   border-radius: 100%;
 }
 
+/** ICONA DEL DROPDROWN NASCOSTA*/
 .dropdown-toggle::after {
   visibility: hidden;
 }
@@ -12194,8 +12227,8 @@ body {
 }
 
 .rowsvg {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   border-radius: 100%;
 }
 
@@ -12206,6 +12239,44 @@ body {
 
 .testoRightcard-2 {
   font-size: 0.6em;
+}
+
+.house-door,
+#searchButtonIcon,
+.library, .listli, .expandOp {
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  color: white;
+}
+
+.house-door:hover,
+#searchButtonIcon:hover,
+.library:hover, .listli:hover, .expandOp:hover {
+  opacity: 1;
+  color: white;
+}
+
+/** MINI ANIMAZIONI **/
+.overscrollBar .expandEP {
+  font-size: 1em;
+  font-weight: 700;
+  padding: 0.3em 1.1em;
+}
+
+.expandEP, .expandOp {
+  transition: transform 0.3s;
+}
+
+.expandEP:hover, .expandOp:hover, .expandOp:focus {
+  transform: scale(1.05);
+}
+
+.sechov {
+  transition: background-color 0.6s;
+}
+
+.sechov:hover {
+  background-color: #1a1a1a;
 }
 
 section#player {

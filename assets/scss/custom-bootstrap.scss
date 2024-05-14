@@ -20,22 +20,61 @@ $new-theme-colors: (
 $theme-colors: map-merge($theme-colors, $new-theme-colors);
 @import './bootstrap/bootstrap.scss';
 
+
+
+/**** BARRA SCORRIMENTO CUSTOMIZZATA****/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
+  border-radius: 3em;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
 body {
     font-family: "Circular" !important;
 }
 
+
+/*** ICONA CUORE***/
 #icon-heart {
     background: rgb(72,38,177);
     background: linear-gradient(131deg, rgba(72,38,177,1) 3%, rgba(75,44,174,1) 4%, rgba(75,45,173,1) 7%, rgba(80,57,167,1) 10%, rgba(81,60,165,1) 12%, rgba(81,60,165,1) 14%, rgba(79,55,168,1) 16%, rgba(81,60,165,1) 18%, rgba(82,61,164,1) 21%, rgba(82,62,164,1) 23%, rgba(85,69,161,1) 25%, rgba(84,67,162,1) 25%, rgba(86,70,160,1) 28%, rgba(86,72,159,1) 30%, rgba(87,76,157,1) 33%, rgba(87,76,157,1) 34%, rgba(87,75,157,1) 35%, rgba(88,77,156,1) 40%, rgba(88,77,156,1) 42%, rgba(88,76,157,1) 45%, rgba(88,77,156,1) 48%, rgba(94,89,149,1) 50%, rgba(94,89,149,1) 53%, rgba(94,89,149,1) 55%, rgba(115,110,162,1) 59%, rgba(126,121,169,1) 65%, rgba(158,154,190,1) 72%, rgba(255,251,251,1) 83%);
 }
 
+/** PLAYLIST BAR*/
+#listPlaylist {
+  height: auto;
+    div {
+      height: 50vh;
+    }
+}
 
+
+
+
+/**** IMG USER ***/
 #button-img {
    background-image: url('https://i.pinimg.com/originals/67/ac/14/67ac14198bd1b4745d820e94ef4b07e2.jpg');
    background-size: contain;
    background-repeat: no-repeat;
    border-radius: 100%;
 } 
+/** ICONA DEL DROPDROWN NASCOSTA*/
 .dropdown-toggle::after {
     visibility: hidden;
 }
@@ -61,8 +100,8 @@ body {
 }
 
 .rowsvg {
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     border-radius: 100%;
 }
 /*************Right bar card***************/
@@ -72,6 +111,47 @@ body {
 .testoRightcard-2{
   font-size: 0.6em;
 }
+
+
+
+.house-door,
+#searchButtonIcon,
+.library, .listli, .expandOp {
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  color: white;
+}
+
+.house-door:hover,
+#searchButtonIcon:hover,
+.library:hover, .listli:hover, .expandOp:hover {
+  opacity: 1;
+  color: white;
+}
+
+
+/** MINI ANIMAZIONI **/
+.overscrollBar
+.expandEP {
+  font-size: 1em;
+  font-weight: 700;
+  padding: 0.3em 1.1em;
+}
+.expandEP, .expandOp {
+  transition: transform 0.3s;
+}
+.expandEP:hover, .expandOp:hover, .expandOp:focus {
+  transform: scale(1.05);
+}
+.sechov {
+  transition: background-color 0.6s;
+}
+.sechov:hover {
+  background-color: #1a1a1a;
+}
+
+
+
 
 
 section#player {
