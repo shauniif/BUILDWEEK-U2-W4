@@ -12397,4 +12397,8 @@ i.fa-pause-circle,
 i.fa-step-forward,
 i.fa-step-backward {
   cursor: pointer;
+}
+
+.table-transparent {
+  background-color: transparent !important;
 }/*# sourceMappingURL=custom-bootstrap.css.map */
