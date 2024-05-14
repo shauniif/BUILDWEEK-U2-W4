@@ -16,15 +16,303 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/scss/custom-bootstrap.css" />
-
+    <!-- FONT -->
     <link rel="stylesheet" href="./assets/css/circular-font.css" />
+    <!-- ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
   </head>
 
-  <body>
-    <header>
-      <p class="text-primary"></p>
-    </header>
-    <main></main>
+  <body class="text-light">
+    <main class="bg-black m-0 p-0">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- LEFTBAR -->
+          <div class="col-2 flex-column">
+            <!-- SECTION HOME&SEARCH&LIBRARY-->
+            <div class="row flex-column">
+              <div class="col py-4 bg-tertiary rounded-5">
+                <p class="d-flex align-items-center ms-3">
+                  <a class="text-decoration-none text-light" href="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      fill="currentColor"
+                      class="bi bi-house-door"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"
+                      />
+                    </svg>
+
+                    <span class="ms-2">Home</span>
+                  </a>
+                </p>
+                <p class="d-flex align-items-center ms-3">
+                  <a class="text-decoration-none text-light" href="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      fill="currentColor"
+                      class="bi bi-search"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                      />
+                    </svg>
+                    <span class="ms-2">Cerca</span>
+                  </a>
+                </p>
+                <p class="d-flex align-items-center ms-3 mb-0">
+                  <a class="text-decoration-none text-light" text-light href="">
+                    <svg
+                      role="img"
+                      height="28"
+                      width="28"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      data-encore-id="icon"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M14.5 2.134a1 1 0 011 0l6 3.464a1 1 0 01.5.866V21a1 1 0 01-1 1h-6a1 1 0 01-1-1V3a1 1 0 01.5-.866zM16 4.732V20h4V7.041l-4-2.309zM3 22a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1zm6 0a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1z"
+                      ></path>
+                    </svg>
+                    <span class="ms-2">La tua liberia</span>
+                  </a>
+                </p>
+              </div>
+              <!-- ALTRA SEZIONE -->
+              <div class="col mt-3 bg-tertiary rounded-5">
+                <p class="d-flex align-items-center ms-3 mb-0 mt-2">
+                  <a class="text-decoration-none text-light" href="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      height="28"
+                      width="28"
+                      aria-hidden="true"
+                      viewBox="0 -5 16 25"
+                      data-encore-id="icon"
+                      class="Svg-sc-ytk21e-0 uPxdw border border-1 border-light bg-light"
+                      fill="black"
+                    >
+                      <path
+                        d="M15.25 8a.75.75 0 01-.75.75H8.75v5.75a.75.75 0 01-1.5 0V8.75H1.5a.75.75 0 010-1.5h5.75V1.5a.75.75 0 011.5 0v5.75h5.75a.75.75 0 01.75.75z"
+                      ></path>
+                    </svg>
+                    <span class="ms-2"> Crea playlist</span>
+                  </a>
+                </p>
+
+                <p class="d-flex align-items-center ms-3 mt-3">
+                  <a class="text-decoration-none text-light" text-light href="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      fill="currentColor"
+                      class="bi bi-suit-heart-fill"
+                      viewBox="0 -5 16 25"
+                      id="icon-heart"
+                    >
+                      <path
+                        d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"
+                      />
+                    </svg>
+                    <span class="ms-2"> Brani che ti piacciono </span>
+                  </a>
+                </p>
+
+                <p class="d-flex align-items-center ms-3 mt-3">
+                  <a class="text-decoration-none text-light" href="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      fill="#1dd25e"
+                      class="bi bi-bookmark-fill bg-another-color"
+                      viewBox="0 -5 16 25"
+                    >
+                      <path
+                        d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
+                      />
+                    </svg>
+                    <span class="ms-2"> I tuoi episodi </span>
+                  </a>
+                </p>
+              </div>
+            </div>
+            <!-- SECTION PLAYLIST -->
+            <div class="row flex-column bg-tertiary rounded-5 mt-3">
+              <ul class="col list-unstyled">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- MAIN SECTION-->
+          <div class="col flex-row">
+            <!-- NAV BAR MAIN SECTION -->
+            <div class="navbar justify-content-space-between">
+              <div class="nav-left d-flex flex-row">
+                <button class="btn btn-tertiary rowsvg mt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="white"
+                    class="bi bi-chevron-left"
+                    viewBox="0 -5 16 25"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+                    />
+                  </svg>
+                </button>
+                <button class="btn btn-tertiary rowsvg mt-1 ms-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="white"
+                    class="bi bi-chevron-right"
+                    viewBox="0 -5 16 25"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                    />
+                  </svg>
+                </button>
+                <div class="ms-3 rounded-5">
+                  <div class="input-icons d-flex">
+                    <i
+                      class="bi bi-search text-light align-self-center ps-2 mt-2"
+                    ></i>
+                    <input
+                      class="input-field bg-tertiary border border-0 text-light ps-4 rounded-5 mt-2"
+                      type="text"
+                      placeholder="Cosa vuoi ascoltare?"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="nav-right">
+                <button class="nav-btn rounded-5 me-2 p-2 bg-light">
+                  Esplora Premium
+                </button>
+                <button class="btn btn-tertiary rowsvg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="currentColor"
+                    class="bi bi-bell"
+                    viewBox="0 -4 20 25"
+                  >
+                    <path
+                      d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"
+                    />
+                  </svg>
+                </button>
+                <button class="btn btn-tertiary rowsvg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="currentColor"
+                    class="bi bi-people"
+                    viewBox="0 -4 20 25"
+                  >
+                    <path
+                      d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"
+                    />
+                  </svg>
+                </button>
+                <button class="btn btn-tertiary" id="button-img">
+                  <li class="nav-item dropdown list-unstyled">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- RIGHT SECTION-->
+          <div class="col d-none"></div>
+        </div>
+      </div>
+    </main>
     <footer></footer>
 
     <script
