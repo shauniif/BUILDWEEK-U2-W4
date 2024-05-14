@@ -12232,6 +12232,11 @@ body {
   border-radius: 100%;
 }
 
+/**NASCONDI ANNUNCI **/
+#hideAdv {
+  font-size: 0.7em;
+}
+
 /*************Right bar card***************/
 .testoRightcard-1 {
   font-size: 0.9em;

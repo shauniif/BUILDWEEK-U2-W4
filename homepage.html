@@ -583,62 +583,252 @@
             </div>
             <!-- MAIN SECTION CONTENUTI-->
             <!-- ROW PUBBLICITA'-->
-            <div class="row"></div>
-            <!-- ROW PLAYLIST PERSONALI-->
-            <div class="row w-100">              
-              <div class="row"><h2>Buonasera</h2></div>
-              <div class="row px-4 pt-4">
-                <div class="col-12 p-0 d-flex flex-row justify-content-around">
-                  <div class="col-4 rounded-2 me-3 bg-tertiary d-flex flex-row align-items-center">
-                    <div class="col-4"><img src="./assets/imgs/main/image-11.jpg" class="img-fluid rounded-2" style="height: 80px; width: 80px;" alt=""></div>
-                    <div class="col-8"><p class="mb-0 ms-3">Titolo dell'Album</p></div>
-                  </div>
-                  <div class="col-4 rounded-2 me-3 bg-tertiary d-flex flex-row align-items-center">
-                    <div class="col-4">
-                      <div class="d-flex flex-row flex-wrap" style="width: 80px; height: 80px;">
-                        <div style="width: 40px; height: 40px;"><img src="./assets/imgs/main/image-12.jpg" class="img-fluid" alt=""></div>
-                        <div style="width: 40px; height: 40px;"><img src="./assets/imgs/main/image-14.jpg" class="img-fluid" alt=""></div>
-                        <div style="width: 40px; height: 40px;"><img src="./assets/imgs/main/image-15.jpg" class="img-fluid" alt=""></div>
-                        <div style="width: 40px; height: 40px;"><img src="./assets/imgs/main/image-16.jpg" class="img-fluid" alt=""></div>
+            <div
+              class="col-12 flex-row ms-lg-5 bg-gradient bg-gradient ms-5 content w-75"
+              id="colAdv"
+            >
+              <div class="row justify-content-center">
+                <div class="col-3">
+                  <img
+                    src="./assets/imgs/main/image-8.jpg"
+                    class="img-fluid py-3"
+                    height="200"
+                    width="300"
+                    alt="Cover Album"
+                  />
+                </div>
+                <div class="col-8 py-2">
+                  <div class="row d-flex justify-content-between flex-row">
+                    <div class="col-7">
+                      <p class="text-uppercase">album</p>
+                      <h1 class="text-uppercase">nome album</h1>
+                      <p>Nome autore</p>
+                      <p>
+                        Ascolta il nuovo singolo di <span>Nome Autore</span>
+                      </p>
+                      <div>
+                        <button
+                          class="rounded-5 p-2 px-4 btn btn-primary text-black"
+                        >
+                          Play</button
+                        ><button
+                          class="rounded-5 p-2 px-4 btn btn-black text-light border border-1 border-light ms-3"
+                        >
+                          Salva
+                        </button>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="28"
+                          height="28"
+                          fill="currentColor"
+                          class="bi bi-three-dots ms-3"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+                          />
+                        </svg>
                       </div>
                     </div>
-                    <div class="col-8"><p class="mb-0 ms-3">Titolo dell'Album</p></div>
+                    <div class="col-3 text-end">
+                      <button
+                        class="border border-0 rounded-5 text-light opacity-50 bg-opacity-10 bg-light text-uppercase"
+                        id="hideAdv"
+                      >
+                        Nascondi annunci
+                      </button>
+                    </div>
                   </div>
-                  <div class="col-4 rounded-2  bg-tertiary d-flex flex-row align-items-center">
-                    <div class="col-4"><img src="./assets/imgs/main/image-11.jpg" class="img-fluid rounded-2" style="height: 80px; width: 80px;" alt=""></div>
-                    <div class="col-8"><p class="mb-0 ms-3">Titolo dell'Album</p></div>
-                  </div>
-                </div>             
+                </div>
               </div>
-              <div class="row px-4 pt-2">
-                <div class="col-12 p-0 d-flex flex-row justify-content-around">
-                  <div class="col-4 rounded-2 me-3 bg-tertiary d-flex flex-row align-items-center">
-                    <div class="col-4">
-                      <div class="d-flex flex-row flex-wrap" style="width: 80px; height: 80px;">
-                        <div style="width: 40px; height: 40px;"><img src="./assets/imgs/main/image-12.jpg" class="img-fluid" alt=""></div>
-                        <div style="width: 40px; height: 40px;"><img src="./assets/imgs/main/image-14.jpg" class="img-fluid" alt=""></div>
-                        <div style="width: 40px; height: 40px;"><img src="./assets/imgs/main/image-15.jpg" class="img-fluid" alt=""></div>
-                        <div style="width: 40px; height: 40px;"><img src="./assets/imgs/main/image-16.jpg" class="img-fluid" alt=""></div>
+            </div>
+            <!-- ROW PLAYLIST PERSONALI-->
+            <div class="row">
+              <div class="row w-100">
+                <div class="row"><h2>Buonasera</h2></div>
+                <div class="row px-4 pt-4">
+                  <div
+                    class="col-12 p-0 d-flex flex-row justify-content-around"
+                  >
+                    <div
+                      class="col-4 rounded-2 me-3 bg-tertiary d-flex flex-row align-items-center"
+                    >
+                      <div class="col-4">
+                        <img
+                          src="./assets/imgs/main/image-11.jpg"
+                          class="img-fluid rounded-2"
+                          style="height: 80px; width: 80px"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-8">
+                        <p class="mb-0 ms-3">Titolo dell'Album</p>
                       </div>
                     </div>
-                    <div class="col-8"><p class="mb-0 ms-3">Titolo dell'Album</p></div>
-                  </div>
-                  <div class="col-4 rounded-2 me-3 bg-tertiary d-flex flex-row align-items-center">
-                    <div class="col-4"><img src="./assets/imgs/main/image-11.jpg" class="img-fluid rounded-2 " style="height: 80px; width: 80px;" alt=""></div>
-                    <div class="col-8"><p class="mb-0 ms-3">Titolo dell'Album</p></div>
-                  </div>
-                  <div class="col-4 rounded-2  bg-tertiary d-flex flex-row align-items-center">
-                    <div class="col-4">
-                      <div class="d-flex flex-row flex-wrap" style="width: 80px; height: 80px;">
-                        <div style="width: 40px; height: 40px;"><img src="./assets/imgs/main/image-12.jpg" class="img-fluid" alt=""></div>
-                        <div style="width: 40px; height: 40px;"><img src="./assets/imgs/main/image-14.jpg" class="img-fluid" alt=""></div>
-                        <div style="width: 40px; height: 40px;"><img src="./assets/imgs/main/image-15.jpg" class="img-fluid" alt=""></div>
-                        <div style="width: 40px; height: 40px;"><img src="./assets/imgs/main/image-16.jpg" class="img-fluid" alt=""></div>
+                    <div
+                      class="col-4 rounded-2 me-3 bg-tertiary d-flex flex-row align-items-center"
+                    >
+                      <div class="col-4">
+                        <div
+                          class="d-flex flex-row flex-wrap"
+                          style="width: 80px; height: 80px"
+                        >
+                          <div style="width: 40px; height: 40px">
+                            <img
+                              src="./assets/imgs/main/image-12.jpg"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </div>
+                          <div style="width: 40px; height: 40px">
+                            <img
+                              src="./assets/imgs/main/image-14.jpg"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </div>
+                          <div style="width: 40px; height: 40px">
+                            <img
+                              src="./assets/imgs/main/image-15.jpg"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </div>
+                          <div style="width: 40px; height: 40px">
+                            <img
+                              src="./assets/imgs/main/image-16.jpg"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-8">
+                        <p class="mb-0 ms-3">Titolo dell'Album</p>
                       </div>
                     </div>
-                    <div class="col-8"><p class="mb-0 ms-3">Titolo dell'Album</p></div>
+                    <div
+                      class="col-4 rounded-2 bg-tertiary d-flex flex-row align-items-center"
+                    >
+                      <div class="col-4">
+                        <img
+                          src="./assets/imgs/main/image-11.jpg"
+                          class="img-fluid rounded-2"
+                          style="height: 80px; width: 80px"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-8">
+                        <p class="mb-0 ms-3">Titolo dell'Album</p>
+                      </div>
+                    </div>
                   </div>
-                </div>             
+                </div>
+                <div class="row px-4 pt-2">
+                  <div
+                    class="col-12 p-0 d-flex flex-row justify-content-around"
+                  >
+                    <div
+                      class="col-4 rounded-2 me-3 bg-tertiary d-flex flex-row align-items-center"
+                    >
+                      <div class="col-4">
+                        <div
+                          class="d-flex flex-row flex-wrap"
+                          style="width: 80px; height: 80px"
+                        >
+                          <div style="width: 40px; height: 40px">
+                            <img
+                              src="./assets/imgs/main/image-12.jpg"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </div>
+                          <div style="width: 40px; height: 40px">
+                            <img
+                              src="./assets/imgs/main/image-14.jpg"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </div>
+                          <div style="width: 40px; height: 40px">
+                            <img
+                              src="./assets/imgs/main/image-15.jpg"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </div>
+                          <div style="width: 40px; height: 40px">
+                            <img
+                              src="./assets/imgs/main/image-16.jpg"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-8">
+                        <p class="mb-0 ms-3">Titolo dell'Album</p>
+                      </div>
+                    </div>
+                    <div
+                      class="col-4 rounded-2 me-3 bg-tertiary d-flex flex-row align-items-center"
+                    >
+                      <div class="col-4">
+                        <img
+                          src="./assets/imgs/main/image-11.jpg"
+                          class="img-fluid rounded-2"
+                          style="height: 80px; width: 80px"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-8">
+                        <p class="mb-0 ms-3">Titolo dell'Album</p>
+                      </div>
+                    </div>
+                    <div
+                      class="col-4 rounded-2 bg-tertiary d-flex flex-row align-items-center"
+                    >
+                      <div class="col-4">
+                        <div
+                          class="d-flex flex-row flex-wrap"
+                          style="width: 80px; height: 80px"
+                        >
+                          <div style="width: 40px; height: 40px">
+                            <img
+                              src="./assets/imgs/main/image-12.jpg"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </div>
+                          <div style="width: 40px; height: 40px">
+                            <img
+                              src="./assets/imgs/main/image-14.jpg"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </div>
+                          <div style="width: 40px; height: 40px">
+                            <img
+                              src="./assets/imgs/main/image-15.jpg"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </div>
+                          <div style="width: 40px; height: 40px">
+                            <img
+                              src="./assets/imgs/main/image-16.jpg"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-8">
+                        <p class="mb-0 ms-3">Titolo dell'Album</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- ROW PLAYLIST "CREATE" DA SPOTIFY -->

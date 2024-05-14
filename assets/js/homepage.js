@@ -29,6 +29,12 @@ xRightBar.addEventListener('click', function() {
 })
 
 
+// COL PUBBLICITA' 
+let colAdv = document.getElementById('colAdv')
+let hideAdv = document.getElementById('hideAdv')
+hideAdv.addEventListener('click', function() {
+    colAdv.classList.add('d-none')
+})
 
 
 
