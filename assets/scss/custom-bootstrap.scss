@@ -110,6 +110,75 @@ body {
 #hideAdv {
   font-size: 0.7em;
 }
+
+//sezione playlist create da spotify
+.spotifyPlaylists {
+  padding: 20px 40px;
+  padding-left: 0px;
+  padding-bottom: 10em;
+
+  h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .list {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+
+    .item {
+      min-width: 140px;
+      width: 160px;
+      padding: 15px;
+      background-color: #121212;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all ease 0.4s;
+
+      &:hover {
+        background-color: #252525;
+
+        .play .fa {
+          opacity: 1;
+          transform: translateY(-20px);
+        }
+      }
+
+      img {
+        width: 100%;
+        border-radius: 6px;
+        margin-bottom: 10px;
+      }
+
+      h4 {
+        color: #ffffff;
+        font-size: 14px;
+        margin-bottom: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      p {
+        color: #989898;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  hr {
+    margin: 70px 0px 0px;
+    border-color: #636363;
+  }
+}
+
+
+
+
 /*************Right bar card***************/
 .testoRightcard-1{
   font-size: 0.9em;
