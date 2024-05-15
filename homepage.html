@@ -30,10 +30,13 @@
       <div class="container-fluid">
         <div class="row">
           <!-- LEFTBAR -->
-          <div class="col-2 flex-column">
+          <div class="col-lg-2 flex-column">
             <!-- SECTION HOME&SEARCH&LIBRARY-->
             <div class="row flex-column">
-              <div class="col py-4 bg-tertiary rounded-3 mt-3">
+              <div
+                class="col d-none d-lg-inline flex-lg-column justify-content-between py-4 bg-tertiary mt-3"
+                id="barHomeSearchLibrary"
+              >
                 <p class="d-flex align-items-center ms-3 house-door">
                   <a class="text-decoration-none text-light" href="">
                     <svg
@@ -41,7 +44,7 @@
                       width="28"
                       height="28"
                       fill="currentColor"
-                      class="bi bi-house-door"
+                      class="bi bi-house-door ms-2 ms-lg-0"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -49,7 +52,7 @@
                       />
                     </svg>
 
-                    <span class="ms-2">Home</span>
+                    <span class="d-block d-lg-inline ms-lg-2">Home</span>
                   </a>
                 </p>
                 <p class="d-flex align-items-center ms-3" id="searchButtonIcon">
@@ -59,17 +62,17 @@
                       width="28"
                       height="28"
                       fill="currentColor"
-                      class="bi bi-search"
+                      class="bi bi-search ms-2 ms-lg-0"
                       viewBox="0 0 16 16"
                     >
                       <path
                         d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
                       />
                     </svg>
-                    <span class="ms-2">Cerca</span>
+                    <span class="d-block d-lg-inline ms-lg-2">Cerca</span>
                   </a>
                 </p>
-                <p class="d-flex align-items-center ms-3 mb-0">
+                <p class="d-flex align-items-center ms-3 mb-lg-0">
                   <a
                     class="text-decoration-none text-light library"
                     text-light
@@ -83,18 +86,21 @@
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       data-encore-id="icon"
+                      class="ms-4 ms-lg-0"
                       fill="currentColor"
                     >
                       <path
                         d="M14.5 2.134a1 1 0 011 0l6 3.464a1 1 0 01.5.866V21a1 1 0 01-1 1h-6a1 1 0 01-1-1V3a1 1 0 01.5-.866zM16 4.732V20h4V7.041l-4-2.309zM3 22a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1zm6 0a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1z"
                       ></path>
                     </svg>
-                    <span class="ms-2">La tua liberia</span>
+                    <span class="d-block d-lg-inline ms-lg-2"
+                      >La tua liberia</span
+                    >
                   </a>
                 </p>
               </div>
               <!-- ALTRA SEZIONE -->
-              <div class="col mt-3 bg-tertiary rounded-3">
+              <div class="col d-none d-lg-block mt-3 bg-tertiary rounded-3">
                 <p class="d-flex align-items-center ms-3 mb-0 mt-4 sechov">
                   <a class="text-decoration-none text-light" href="">
                     <svg
@@ -155,7 +161,9 @@
               </div>
             </div>
             <!-- SECTION PLAYLIST -->
-            <div class="row flex-column bg-tertiary rounded-3 mt-3">
+            <div
+              class="row d-none d-lg-block flex-column bg-tertiary rounded-3 mt-3"
+            >
               <ul class="col list-unstyled mt-2" id="listPlaylist">
                 <div class="overflow-y-scroll">
                   <li class="d-flex align-content-center mb-2">
@@ -468,7 +476,7 @@
           <!-- MAIN SECTION-->
           <div class="col flex-row">
             <!-- NAV BAR MAIN SECTION -->
-            <div class="navbar justify-content-space-between">
+            <div class="navbar d-none d-lg-flex justify-content-space-between">
               <div class="nav-left d-flex flex-row mt-3">
                 <button class="btn btn-tertiary rowsvg mt-1">
                   <svg
@@ -584,7 +592,7 @@
             <!-- MAIN SECTION CONTENUTI-->
             <!-- ROW PUBBLICITA'-->
             <div
-              class="col-12 flex-row ms-lg-5 bg-gradient bg-gradient ms-5 content w-75"
+              class="d-none d-lg-block col-lg-12 flex-row ms-lg-5 bg-gradient bg-gradient ms-5 content w-75"
               id="colAdv"
             >
               <div class="row justify-content-center">
@@ -643,7 +651,7 @@
               </div>
             </div>
             <!-- ROW PLAYLIST PERSONALI-->
-            <div class="row">
+            <div class="row" id="personalPlaylist">
               <div class="row w-100">
                 <div class="row"><h2>Buonasera</h2></div>
                 <div class="row px-4 pt-4">
@@ -833,6 +841,131 @@
             </div>
             <!-- ROW PLAYLIST "CREATE" DA SPOTIFY -->
             <div class="row"></div>
+            <!--MAIN PART DEL SEARCH -->
+            <div class="row d-none mt-3 gy-3" id="playListSearch">
+              <div class="row w-100">
+                <div class="row ms-2"><h2>Sfoglia tutto</h2></div>
+
+                <div
+                  class="card bg-primary text-white rounded-3 overflow-hidden ms-4 p-0 my-3"
+                  style="width: 200px; height: 200px"
+                >
+                  <div
+                    class="card-body position-relative d-flex align-items-center justify-content-center"
+                  >
+                    <h3 class="position-absolute top-0 start-0 my-3 m-2">
+                      Your Discovery Weekly
+                    </h3>
+                    <img
+                      src="/assets/imgs/search/image-1.jpeg"
+                      class="img-fluid position-absolute e-3 mb-3 rotated-img"
+                      alt="Playlist_Cover"
+                      width="115px"
+                      height="115px"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="card bg-primary black text-white rounded-3 overflow-hidden ms-4 p-0 my-3"
+                  style="width: 200px; height: 200px"
+                >
+                  <div
+                    class="card-body position-relative d-flex align-items-center justify-content-center"
+                  >
+                    <h3 class="position-absolute top-0 start-0 my-3 m-2">
+                      Musica
+                    </h3>
+                    <img
+                      src="/assets/imgs/search/image-2.jpg"
+                      class="img-fluid position-absolute e-3 mb-3 rotated-img"
+                      alt="Playlist_Cover"
+                      width="115px"
+                      height="115px"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="card bg-danger text-white rounded-3 overflow-hidden ms-4 p-0 my-3"
+                  style="width: 200px; height: 200px"
+                >
+                  <div
+                    class="card-body position-relative d-flex align-items-center justify-content-center"
+                  >
+                    <h3 class="position-absolute top-0 start-0 my-3 m-2">
+                      Musica
+                    </h3>
+                    <img
+                      src="/assets/imgs/search/image-1.jpeg"
+                      class="img-fluid position-absolute e-3 mb-3 rotated-img"
+                      alt="Playlist_Cover"
+                      width="115px"
+                      height="115px"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="card bg-danger text-white rounded-3 overflow-hidden ms-4 p-0 my-3"
+                  style="width: 200px; height: 200px"
+                >
+                  <div
+                    class="card-body position-relative d-flex align-items-center justify-content-center"
+                  >
+                    <h3 class="position-absolute top-0 start-0 my-3 m-2">
+                      Musica
+                    </h3>
+                    <img
+                      src="/assets/imgs/search/image-1.jpeg"
+                      class="img-fluid position-absolute e-3 mb-3 rotated-img"
+                      alt="Playlist_Cover"
+                      width="115px"
+                      height="115px"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="card bg-danger text-white rounded-3 overflow-hidden ms-4 p-0 my-3"
+                  style="width: 200px; height: 200px"
+                >
+                  <div
+                    class="card-body position-relative d-flex align-items-center justify-content-center"
+                  >
+                    <h3 class="position-absolute top-0 start-0 my-3 m-2">
+                      Musica
+                    </h3>
+                    <img
+                      src="/assets/imgs/search/image-1.jpeg"
+                      class="img-fluid position-absolute e-3 mb-3 rotated-img"
+                      alt="Playlist_Cover"
+                      width="115px"
+                      height="115px"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="card bg-danger text-white rounded-3 overflow-hidden ms-4 p-0 my-3"
+                  style="width: 200px; height: 200px"
+                >
+                  <div
+                    class="card-body position-relative d-flex align-items-center justify-content-center"
+                  >
+                    <h3 class="position-absolute top-0 start-0 my-3 m-2">
+                      Musica
+                    </h3>
+                    <img
+                      src="/assets/imgs/search/image-1.jpeg"
+                      class="img-fluid position-absolute e-3 mb-3 rotated-img"
+                      alt="Playlist_Cover"
+                      width="115px"
+                      height="115px"
+                    />
+                  </div>
+                </div>
+                <!-- PROVA-->
+              </div>
+            </div>
           </div>
           <!-- RIGHT SECTION-->
           <div class="col-2 d-none mt-4 bg-tertiary rounded-3" id="rightBar">
@@ -1125,6 +1258,75 @@
         </div>
       </div>
     </section>
+    <!-- BAR MOBILE VERSION-->
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          class="col d-flex flex-row d-lg-none justify-content-between py-4 bg-tertiary w-100"
+          id="barHomeSearchLibrary"
+        >
+          <p class="d-flex align-items-center ms-3 house-door">
+            <a class="text-decoration-none text-light" href="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                fill="currentColor"
+                class="bi bi-house-door ms-2 ms-lg-0"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"
+                />
+              </svg>
+
+              <span class="d-block d-lg-inline ms-lg-2">Home</span>
+            </a>
+          </p>
+          <p class="d-flex align-items-center ms-3" id="searchButtonIcon">
+            <a class="text-decoration-none text-light" href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                fill="currentColor"
+                class="bi bi-search ms-2 ms-lg-0"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                />
+              </svg>
+              <span class="d-block d-lg-inline ms-lg-2">Cerca</span>
+            </a>
+          </p>
+          <p class="d-flex align-items-center ms-3 mb-lg-0">
+            <a
+              class="text-decoration-none text-light library"
+              text-light
+              href=""
+            >
+              <svg
+                role="img"
+                height="28"
+                width="28"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                data-encore-id="icon"
+                class="ms-4 ms-lg-0"
+                fill="currentColor"
+              >
+                <path
+                  d="M14.5 2.134a1 1 0 011 0l6 3.464a1 1 0 01.5.866V21a1 1 0 01-1 1h-6a1 1 0 01-1-1V3a1 1 0 01.5-.866zM16 4.732V20h4V7.041l-4-2.309zM3 22a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1zm6 0a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1z"
+                ></path>
+              </svg>
+              <span class="d-block d-lg-inline ms-lg-2">La tua liberia</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
