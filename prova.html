@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Dinamico</title>
+  </head>
+  <body>
+    <input type="text" id="myInput" placeholder="Scrivi qui..." />
+    <p id="output"></p>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const inputElement = document.getElementById("myInput");
+        const outputElement = document.getElementById("output");
+
+        inputElement.addEventListener("input", () => {
+          outputElement.textContent = inputElement.value;
+        });
+      });
+    </script>
+  </body>
+</html>

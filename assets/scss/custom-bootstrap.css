@@ -12153,6 +12153,17 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/**BARRA NAVIGAZIONE**/
+#barHomeSearchLibrary {
+  position: fixed;
+  bottom: 0;
+}
+@media screen and (min-width: 992px) {
+  #barHomeSearchLibrary {
+    position: static;
+  }
+}
+
 /**** BARRA SCORRIMENTO CUSTOMIZZATA****/
 /* width */
 ::-webkit-scrollbar {
@@ -12191,7 +12202,7 @@ body {
   height: auto;
 }
 #listPlaylist div {
-  height: 50vh;
+  height: 48vh;
 }
 
 /**** IMG USER ***/
@@ -12238,11 +12249,6 @@ body {
   font-size: 0.7em;
 }
 
-.spotifyPlaylists {
-  padding: 20px 40px;
-  padding-left: 0px;
-  padding-bottom: 10em;
-}
 .spotifyPlaylists h2, .spotifyPlaylists .h2 {
   color: #ffffff;
   font-size: 22px;
@@ -12291,6 +12297,30 @@ body {
 .spotifyPlaylists hr {
   margin: 70px 0px 0px;
   border-color: #636363;
+}
+
+#main-section {
+  height: auto;
+}
+#main-section #sectionContent {
+  height: 73.3vh;
+}
+@media screen and (min-width: 992px) {
+  #main-section #sectionContent {
+    height: 85vh;
+  }
+}
+
+#rowOverscroll {
+  height: auto;
+}
+#rowOverscroll #rowforGenarateCard {
+  height: 68vh;
+}
+@media screen and (min-width: 992px) {
+  #rowOverscroll {
+    height: 75vh;
+  }
 }
 
 /*************Right bar card***************/
@@ -12349,15 +12379,16 @@ body {
   right: -30px;
 }
 
-section#player {
+section.player {
   position: fixed;
   width: 100%;
-  bottom: 0;
-  height: 11vh;
+  bottom: 110px;
+  height: 14.1vh;
 }
-@media screen and (max-width: 768px) {
-  section#player {
-    bottom: 90px;
+@media screen and (min-width: 992px) {
+  section.player {
+    bottom: 0;
+    height: 11vh;
   }
 }
 
@@ -12371,8 +12402,8 @@ section#player {
 }
 @media screen and (max-width: 768px) {
   .player {
-    justify-content: center !important;
-    background-color: rgba(40, 40, 40, 0.8);
+    justify-content: space-between !important;
+    background-color: rgb(40, 40, 40);
   }
 }
 
@@ -12381,11 +12412,6 @@ section#player {
   align-items: center;
   height: 11vh;
   width: 30%;
-}
-@media screen and (max-width: 768px) {
-  .details {
-    display: none;
-  }
 }
 .details .cover {
   height: 11vh;
@@ -12489,9 +12515,6 @@ section#player {
     display: none;
   }
   .slider_container2 svg:nth-of-type(2) {
-    display: none;
-  }
-  .slider_container2 svg:nth-of-type(3) {
     display: none;
   }
 }

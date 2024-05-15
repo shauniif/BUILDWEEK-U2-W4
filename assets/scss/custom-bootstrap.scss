@@ -20,6 +20,15 @@ $new-theme-colors: (
 $theme-colors: map-merge($theme-colors, $new-theme-colors);
 @import './bootstrap/bootstrap.scss';
 
+/**BARRA NAVIGAZIONE**/
+#barHomeSearchLibrary {
+  position: fixed;
+  bottom: 0;
+
+  @media screen and (min-width: 992px) {
+      position: static;
+  }
+}
 
 
 /**** BARRA SCORRIMENTO CUSTOMIZZATA****/
@@ -60,7 +69,7 @@ body {
 #listPlaylist {
   height: auto;
     div {
-      height: 50vh;
+      height: 48vh;
     }
 }
 
@@ -113,9 +122,7 @@ body {
 
 //sezione playlist create da spotify
 .spotifyPlaylists {
-  padding: 20px 40px;
-  padding-left: 0px;
-  padding-bottom: 10em;
+
 
   h2 {
     color: #ffffff;
@@ -175,7 +182,26 @@ body {
     border-color: #636363;
   }
 }
+ #main-section {
+  height: auto;
+  #sectionContent {
+  height: 73.3vh;
+  @media screen and (min-width: 992px) {
+    height: 85vh;
+    }
+  }
+} 
 
+#rowOverscroll {
+  height: auto;
+  #rowforGenarateCard {
+    height: 68vh;
+  }
+
+  @media screen and (min-width: 992px) {
+    height: 75vh
+  }
+}
 
 
 
@@ -236,13 +262,14 @@ body {
 }
 
 
-section#player {
+section.player {
     position: fixed;
     width: 100%;
-    bottom: 0;
-    height: 11vh;
-    @media screen and (max-width: 768px) {
-      bottom: 90px;
+    bottom: 110px;
+    height: 14.1vh;
+    @media screen and (min-width: 992px) {
+      bottom: 0;
+      height: 11vh;
     }
   }
   .player {
@@ -253,8 +280,8 @@ section#player {
     background-color: rgba(0, 0, 0);
     height: 11vh;
     @media screen and (max-width: 768px) {
-      justify-content: center !important;
-      background-color: rgb(40, 40, 40, 0.8);
+      justify-content: space-between !important;
+      background-color: rgb(40, 40, 40, 1);
     }
   }
   
@@ -264,7 +291,7 @@ section#player {
     height: 11vh;
     width: 30%;
     @media screen and (max-width: 768px) {
-      display: none;
+    
     }
     .cover {
       height: 11vh;
@@ -282,7 +309,6 @@ section#player {
     }
     img {
       height: 100%;
-     
     }
   }
   
@@ -366,11 +392,6 @@ section#player {
       display: none;
     
       }
-      svg:nth-of-type(3){
-      display: none;
-    
-      }
-      
     }
   }
   

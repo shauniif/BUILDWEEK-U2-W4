@@ -5,7 +5,9 @@ let searchInput = document.getElementById('SearchInput');
 let colForAdv = document.getElementById('colAdv');
 let personalPlaylist = document.getElementById('personalPlaylist');
 let playListSearch = document.getElementById('playListSearch');
-let spotifyPlaylists = document.getElementsByClassName('spotifyPlaylists')[0];
+let spotifyPlaylists = document.getElementsByClassName('spotifyPlaylists')[0]
+console.log('le playlist sono qyaaaaaaaaaaaaaaa',spotifyPlaylists)
+let sectionContent = document.getElementById('sectionContent');
 let rowforGenerateCard = document.getElementById('rowforGenarateCard');
 console.log('BOTTONE A SINISTRA SEARCH ICONA', searchbuttonIcon)
 console.log('SEARCH INPUT', searchInput)
@@ -16,8 +18,9 @@ searchbuttonIcon.addEventListener('click', function() {
     colForAdv.classList.toggle('d-lg-block')
     playListSearch.classList.toggle('d-none')
     personalPlaylist.classList.toggle('d-none')
-    spotifyPlaylists.classList.toggle('d-none')
+    spotifyPlaylists.classList.toggle('d-none');
     rowforGenerateCard.classList.remove('d-none')
+    sectionContent.classList.toggle('d-none')
     if (!searchInput.classList.contains('invisible')) {
         inputText.focus();
     }
@@ -136,16 +139,10 @@ document.addEventListener('DOMContentLoaded', function() {
         { title: ``, img: 'assets/imgs/search/image-51.jpg' },
         { title: ``, img: 'assets/imgs/search/image-52.jpg' }
         ];
-
-        
-
         // Funzione per creare una card
     function createCard() {
         imagePaths.forEach((img, i) => {
         img.title += ArrayGenresPlayList[i];
-        
-        console.log(img.title[i])
-        console.log(img)
         
         rowforGenerateCard.innerHTML += 
         ` 
@@ -170,7 +167,34 @@ document.addEventListener('DOMContentLoaded', function() {
 })
     }
     createCard()
+    
+    let queryResearch;
+    console.log(queryResearch)
+    searchInput.addEventListener("input", function() {
+        console.log('Ricerca:',  searchInput.value)
+        researchSomething()
+    })
 
+let URLF =  `https://striveschool-api.herokuapp.com/api/deezer/search?q=${queryResearch}`
+let researchSomething = function() {
+    fetch(URLF)
+
+.then((response) => {
+    if(response.ok) {
+        console.log('DAJE BEPPE ANDIAMO IN FRANCIA');
+        return response.json()
+    } else {
+        throw new Error('non va qualcosa')
+    }
+}) 
+.then((array) => {
+    console.log('oooo che bello', array) 
+
+})
+    .catch((err) => {
+        console.log('è colpa di', err)
+    })
+}
 }); 
 
 
@@ -180,6 +204,8 @@ searchInput.addEventListener('click', function() {
         playListSearch.classList.remove('d-none')
     })
 })  
+/************************************ INZIO FETCH */
+
 
 
 //TOGGLE DEL RIGHTBAR
