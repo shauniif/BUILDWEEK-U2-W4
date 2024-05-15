@@ -1,12 +1,18 @@
 
-//TOGGLE SEARCH INPUT
+//TOGGLE SEARCH INPUT CON APPARAZIONE DI "PAGINA" SEARCH 
 let searchbuttonIcon = document.getElementById('searchButtonIcon');
 let searchInput = document.getElementById('SearchInput');
+let colForAdv = document.getElementById('colAdv');
+let personalPlaylist = document.getElementById('personalPlaylist');
+let playListSearch = document.getElementById('playListSearch')
 console.log('BOTTONE A SINISTRA SEARCH ICONA', searchbuttonIcon)
 console.log('SEARCH INPUT', searchInput)
 searchbuttonIcon.addEventListener('click', function() {
     searchInput.classList.toggle('invisible');
     inputText = document.getElementById('inputText')
+    colForAdv.classList.toggle('d-lg-block')
+    playListSearch.classList.toggle('d-none')
+    personalPlaylist.classList.toggle('d-none')
     if (!searchInput.classList.contains('invisible')) {
         inputText.focus();
     }
@@ -29,6 +35,12 @@ xRightBar.addEventListener('click', function() {
 })
 
 
+// COL PUBBLICITA' 
+let colAdv = document.getElementById('colAdv')
+let hideAdv = document.getElementById('hideAdv')
+hideAdv.addEventListener('click', function() {
+    colAdv.classList.add('d-none')
+})
 
 
 
@@ -37,3 +49,4 @@ console.log(allLi)
 allLi.forEach(sli => {
     sli.classList.add('listli')
 })
+
