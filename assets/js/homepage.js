@@ -168,40 +168,61 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     createCard()
     
-    let queryResearch;
-    console.log(queryResearch)
+    let query;
+    let url;
     searchInput.addEventListener("input", function() {
-        console.log('Ricerca:',  searchInput.value)
+        query = inputText.value
+        console.log('Ricerca:', query)
         researchSomething()
+        url = `https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`
+        console.log(url)
     })
-
-let URLF =  `https://striveschool-api.herokuapp.com/api/deezer/search?q=${queryResearch}`
+    let rowforGenarateCardMusic = document.getElementById('rowforGenarateCardMusic')
+    let createCardMusic = function(arrSongs) {
+        arrSongs.forEach((element) => {
+            rowforGenarateCardMusic.innerHTML +=`
+            <div class="col">
+            <div class="card bg-tertiary cforhover ms-4">
+            <img src="${element.album.cover_medium}" class="card-img-top" alt="Cover_Song" />
+            <div class="card-body text-light">
+            <h5 class="card-title">${element.title}</h5>
+            <p class="card-text">
+            <span></span> •
+            <a href="#" class="text-light">${element.artist.name}</a>
+            </p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>`
+            // rowforGenarateCardMusic.innerHTML = ''
+        })
+    }
 let researchSomething = function() {
-    fetch(URLF)
-
-.then((response) => {
+    fetch(url)
+    .then((response) => {
     if(response.ok) {
-        console.log('DAJE BEPPE ANDIAMO IN FRANCIA');
+        console.log('La ricerca è andata bene');
         return response.json()
     } else {
-        throw new Error('non va qualcosa')
+        throw new Error('Si è verificato un problema durante la ricerca')
     }
-}) 
-.then((array) => {
-    console.log('oooo che bello', array) 
-
-})
+    }) 
+    .then((arr) => {
+    console.log('Risulato della ricerca:', arr.data) 
+    createCardMusic(arr.data)
+    })
     .catch((err) => {
-        console.log('è colpa di', err)
+        console.log('Errore durante la ricerca:', err)
     })
 }
 }); 
 
-
+let musicRow = document.getElementById('musicRow');
 searchInput.addEventListener('click', function() {
     playListSearch.classList.add('d-none')
     searchInput.addEventListener('keydown', function() {
-        playListSearch.classList.remove('d-none')
+        musicRow.classList.remove('d-none')
     })
 })  
 /************************************ INZIO FETCH */

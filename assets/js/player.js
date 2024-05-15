@@ -1,4 +1,4 @@
-fetch("https://striveschool-api.herokuapp.com/api/deezer/album/${albumID}")
+/*fetch("https://striveschool-api.herokuapp.com/api/deezer/album/${albumID}")
   .then((response) => {
     if (response.ok) {
       return response.json();
@@ -38,7 +38,7 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen}")
           element.querySelector("img").setAttribute("id", photos[i].id);
         });
       }); */
-    });
+  //  });
 
 
 
