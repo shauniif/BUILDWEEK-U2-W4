@@ -49,3 +49,4 @@ console.log(allLi)
 allLi.forEach(sli => {
     sli.classList.add('listli')
 })
+
