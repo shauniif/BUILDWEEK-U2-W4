@@ -14,7 +14,7 @@ console.log('SEARCH INPUT', searchInput)
 
 searchbuttonIcon.addEventListener('click', function() {
     searchInput.classList.toggle('invisible');
-    inputText = document.getElementById('inputText')
+    let inputText = document.getElementById('inputText')
     colForAdv.classList.toggle('d-lg-block')
     playListSearch.classList.toggle('d-none')
     personalPlaylist.classList.toggle('d-none')
@@ -171,14 +171,18 @@ document.addEventListener('DOMContentLoaded', function() {
     let query;
     let url;
     searchInput.addEventListener("input", function() {
+    searchInput.addEventListener("keypress", function() {
         query = inputText.value
         console.log('Ricerca:', query)
         researchSomething()
         url = `https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`
         console.log(url)
-    })
+    })})
     let rowforGenarateCardMusic = document.getElementById('rowforGenarateCardMusic')
     let createCardMusic = function(arrSongs) {
+        if (rowforGenarateCardMusic.innerHTML.trim() !== '') {
+            rowforGenarateCardMusic.innerHTML = '';
+        }
         arrSongs.forEach((element) => {
             rowforGenarateCardMusic.innerHTML +=`
             <div class="col">
@@ -222,6 +226,7 @@ let musicRow = document.getElementById('musicRow');
 searchInput.addEventListener('click', function() {
     playListSearch.classList.add('d-none')
     searchInput.addEventListener('keydown', function() {
+        playListSearch.classList.add('d-none')
         musicRow.classList.remove('d-none')
     })
 })  
@@ -254,7 +259,7 @@ hideAdv.addEventListener('click', function() {
 })
 
 
-
+// LI STILE
 const allLi = document.querySelectorAll('#listPlaylist li');
 console.log(allLi)
 allLi.forEach(sli => {
