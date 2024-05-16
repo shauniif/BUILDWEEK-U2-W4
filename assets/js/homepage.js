@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <h5 class="card-title">${element.title}</h5>
             <p class="card-text">
             <a href="#" class="text-light">${element.album.title}</a> •
-            <a href="artist.html" class="text-light">${element.artist.name}</a>
+            <a href="artist.html?query=${element.artist.id}" class="text-light">${element.artist.name}</a>
             </p>
             </div>
             </div>
@@ -305,7 +305,7 @@ let createArtist = function(arrSongs) {
         <div class="col">
         <div class="card bg-tertiary cforhover ms-4">
         <img src="${element.artist.picture_medium}" class="card-img-top rounded-circle" alt="Cover_Song" />
-        <a href="artist.html" class="text-light">${element.artist.name}</a>
+        <a href="artist.html?q=${element.artist.id}" class="text-light">${element.artist.name}</a>
         <p>Artista</p>
         </p>
         </div>

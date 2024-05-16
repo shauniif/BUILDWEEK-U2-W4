@@ -12588,7 +12588,7 @@ i.fa-step-backward {
   background-image: url("../imgs/main/image-14.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 0px -400px;
   height: 30%;
   width: 100%;
 }/*# sourceMappingURL=custom-bootstrap.css.map */

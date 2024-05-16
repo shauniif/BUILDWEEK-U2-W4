@@ -595,6 +595,27 @@
                   </button>
                 </div>
               </div>
+              <div class="ms-3">
+                <div class="mb-1">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      fill="#42A5F5"
+                      class="bi bi-patch-check-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"
+                      />
+                    </svg>
+                    <span>Utente verificato</span>
+                  </div>
+                </div>
+                <h1 id="nameArtist"></h1>
+                <p><span id="numberListener"></span>ascoltatori mensili</p>
+              </div>
             </div>
 
             <div
@@ -660,37 +681,7 @@
                       </div>
                       <div class="row">
                         <div class="col-12">
-                          <ol>
-                            <li class="">
-                              <div class="row align-items-center">
-                                <div class="col-6 d-flex">
-                                  <div>
-                                    <img
-                                      src="./assets/imgs/main/image-1.jpg"
-                                      alt="cover_song"
-                                      height="50px"
-                                      width="50px"
-                                    />
-                                  </div>
-                                  <div class="align-self-center">
-                                    <p class="m-0 ms-3">
-                                      <a
-                                        href="#"
-                                        class="text-light text-decoration-none"
-                                        >Nome Titolo</a
-                                      >
-                                    </p>
-                                  </div>
-                                </div>
-                                <div class="col-3">
-                                  <p class="mb-0 opacity-50">Numero Rank</p>
-                                </div>
-                                <div class="col-3">
-                                  <p class="mb-0 opacity-50">00:00</p>
-                                </div>
-                              </div>
-                            </li>
-                          </ol>
+                          <ol id="Songrow"></ol>
                         </div>
                       </div>
                     </div>
@@ -704,6 +695,7 @@
                         <div class="col-12 d-flex">
                           <div>
                             <img
+                              id="imgBraniLikes"
                               src="./assets/imgs/main/image-1.jpg"
                               class="rounded-circle"
                               height="100px"
@@ -716,7 +708,7 @@
                               Hai messo mi piace a <span></span> brani
                             </p>
                             <p class="mb-0 opacity-50 testoRightcard-1">
-                              di <span>Nome artista</span>
+                              di <span id="nArtist">Nome artista</span>
                             </p>
                           </div>
                         </div>
@@ -1148,6 +1140,7 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/artist.js"></script>
     <script src="./assets/js/player.js"></script>
     <script src="./assets/js/homepage.js"></script>
   </body>
