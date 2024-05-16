@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Spotify Clone</title>
+    <title>Spotify Clone - Artist</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -479,443 +479,255 @@
           <!-- MAIN SECTION-->
           <div class="col flex-row" id="main-section">
             <!-- NAV BAR MAIN SECTION -->
-            <div class="navbar d-none d-lg-flex justify-content-space-between">
-              <div class="nav-left d-flex flex-row mt-3">
-                <button class="btn btn-tertiary rowsvg mt-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    fill="white"
-                    class="bi bi-chevron-left"
-                    viewBox="13 -2 6 25"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
-                    />
-                  </svg>
-                </button>
-                <button class="btn btn-tertiary rowsvg mt-1 ms-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    fill="white"
-                    class="bi bi-chevron-right"
-                    viewBox="13 -2 6 25"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
-                    />
-                  </svg>
-                </button>
-                <div class="ms-3 rounded-5 invisible" id="SearchInput">
-                  <div class="input-icons d-flex">
-                    <i
-                      class="bi bi-search text-light align-self-center ps-2 mt-2"
-                    ></i>
-                    <input
-                      class="input-field bg-tertiary border border-0 text-light ps-4 rounded-5 mt-2"
-                      id="inputText"
-                      type="text"
-                      placeholder="Cosa vuoi ascoltare?"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="nav-right">
-                <button class="nav-btn rounded-5 me-3 bg-light expandEP">
-                  Esplora Premium
-                </button>
-                <button class="btn btn-tertiary rowsvg expandOp me-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="currentColor"
-                    class="bi bi-bell"
-                    viewBox="11 -2 6 25"
-                  >
-                    <path
-                      d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"
-                    />
-                  </svg>
-                </button>
-                <button
-                  class="btn btn-tertiary rowsvg expandOp me-3"
-                  id="peopleButton"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="currentColor"
-                    class="bi bi-people"
-                    viewBox="10 -2 6 25"
-                  >
-                    <path
-                      d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"
-                    />
-                  </svg>
-                </button>
-                <button class="btn btn-tertiary" id="button-img">
-                  <li class="nav-item dropdown list-unstyled">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                      <li><a class="dropdown-item" href="#">Account</a></li>
-                      <li>
-                        <a class="dropdown-item" href="#">Profilo</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          >Effettua l'upgrade a Premium
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Impostazioni </a>
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a class="dropdown-item" href="#">Esci</a>
-                      </li>
-                    </ul>
-                  </li>
-                </button>
-              </div>
-            </div>
-            <div class="overflow-y-scroll" id="sectionContent">
-              <!-- MAIN SECTION CONTENUTI-->
-              <!-- ROW PUBBLICITA'-->
+            <div class="imgBG" id="imgBG">
               <div
-                class="d-none d-lg-block col-lg-12 flex-row ms-lg-5 bg-gradient bg-gradient ms-5 content w-75"
-                id="colAdv"
+                class="navbar d-none d-lg-flex justify-content-space-between"
               >
-                <div class="row justify-content-center">
-                  <div class="col-3">
-                    <img
-                      src="./assets/imgs/main/image-8.jpg"
-                      class="img-fluid py-3"
-                      height="200"
-                      width="300"
-                      alt="Cover Album"
-                    />
-                  </div>
-                  <div class="col-8 py-2">
-                    <div class="row d-flex justify-content-between flex-row">
-                      <div class="col-7">
-                        <p class="text-uppercase">album</p>
-                        <h1 class="text-uppercase">nome album</h1>
-                        <p>Nome autore</p>
-                        <p>
-                          Ascolta il nuovo singolo di <span>Nome Autore</span>
-                        </p>
-                        <div>
-                          <button
-                            class="rounded-5 p-2 px-4 btn btn-primary text-black"
-                          >
-                            Play</button
-                          ><button
-                            class="rounded-5 p-2 px-4 btn btn-black text-light border border-1 border-light ms-3"
-                          >
-                            Salva
-                          </button>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="28"
-                            height="28"
-                            fill="currentColor"
-                            class="bi bi-three-dots ms-3"
-                            viewBox="0 0 16 16"
-                          >
-                            <path
-                              d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="col-3 text-end">
-                        <button
-                          class="border border-0 rounded-5 text-light opacity-50 bg-opacity-10 bg-light text-uppercase"
-                          id="hideAdv"
-                        >
-                          Nascondi annunci
-                        </button>
-                      </div>
+                <div class="nav-left d-flex flex-row mt-3">
+                  <button class="btn btn-tertiary rowsvg mt-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      fill="white"
+                      class="bi bi-chevron-left"
+                      viewBox="13 -2 6 25"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+                      />
+                    </svg>
+                  </button>
+                  <button class="btn btn-tertiary rowsvg mt-1 ms-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      fill="white"
+                      class="bi bi-chevron-right"
+                      viewBox="13 -2 6 25"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                      />
+                    </svg>
+                  </button>
+                  <div class="ms-3 rounded-5 invisible" id="SearchInput">
+                    <div class="input-icons d-flex">
+                      <i
+                        class="bi bi-search text-light align-self-center ps-2 mt-2"
+                      ></i>
+                      <input
+                        class="input-field bg-tertiary border border-0 text-light ps-4 rounded-5 mt-2"
+                        id="inputText"
+                        type="text"
+                        placeholder="Cosa vuoi ascoltare?"
+                      />
                     </div>
                   </div>
+                </div>
+                <div class="nav-right">
+                  <button class="nav-btn rounded-5 me-3 bg-light expandEP">
+                    Esplora Premium
+                  </button>
+                  <button class="btn btn-tertiary rowsvg expandOp me-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="currentColor"
+                      class="bi bi-bell"
+                      viewBox="11 -2 6 25"
+                    >
+                      <path
+                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="btn btn-tertiary rowsvg expandOp me-3"
+                    id="peopleButton"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="currentColor"
+                      class="bi bi-people"
+                      viewBox="10 -2 6 25"
+                    >
+                      <path
+                        d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"
+                      />
+                    </svg>
+                  </button>
+                  <button class="btn btn-tertiary" id="button-img">
+                    <li class="nav-item dropdown list-unstyled">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Account</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Profilo</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            >Effettua l'upgrade a Premium
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Impostazioni </a>
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Esci</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="overflow-y-scroll bg-gradient bg-tertiary w-100"
+              id="sectionContentArtist"
+            >
+              <!-- MAIN SECTION BRANI DELL'ARTISTS-->
+              <!-- BUTTON '-->
+              <div
+                class="row flex-row ms-lg-2 ms-2 content pt-3 w-75"
+                id="colButton"
+              >
+                <div class="col">
+                  <button
+                    class="border border-0 text-black rounded-circle bg-primary py-2 px-2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      fill="currentColor"
+                      class="bi bi-play-fill"
+                      viewBox="0 0 14 16"
+                    >
+                      <path
+                        d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="btn btn-light text-uppercase bg-transparent border border-1 border-light text-light ms-3"
+                  >
+                    Follow
+                  </button>
+                  <button
+                    class="ms-3 bg-transparent border border-0 text-light"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-three-dots"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+                      />
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <!-- ROW PLAYLIST PERSONALI-->
-              <div
-                class="row justify-content-center justify-content-lg-start w-100"
-                id="personalPlaylist"
-              >
-                <div
-                  class="row justify-content-center justify-content-lg-start w-100"
-                >
-                  <div class="row mt-2"><h2>Buonasera</h2></div>
-                  <div class="row px-lg-4 pt-2 justify-content-center">
-                    <div
-                      class="col-12 p-0 d-flex flex-row flex-wrap flex-lg-nowrap justify-content-around"
-                    >
-                      <div
-                        class="col-12 col-lg-4 rounded-2 me-3 bg-tertiary d-flex flex-row align-items-center mt-lg-3"
-                      >
-                        <div class="col-4">
-                          <img
-                            src="./assets/imgs/main/image-11.jpg"
-                            class="img-fluid rounded-2"
-                            style="height: 80px; width: 80px"
-                            alt=""
-                          />
-                        </div>
-                        <div class="col-8">
-                          <p class="mb-0 ms-3">Titolo dell'Album</p>
+              <!-- ROW CANZONI DELL'ARTISTA-->
+              <div class="row ms-3 mt-4 w-75 justify-content-between">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-8">
+                      <div class="row">
+                        <div class="col-12">
+                          <h4>Popolari:</h4>
                         </div>
                       </div>
-                      <div
-                        class="col-12 col-lg-4 rounded-2 me-3 bg-tertiary d-flex flex-row align-items-center mt-3"
-                      >
-                        <div class="col-4">
-                          <div
-                            class="d-flex flex-row flex-wrap"
-                            style="width: 80px; height: 80px"
-                          >
-                            <div style="width: 40px; height: 40px">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                class="img-fluid"
-                                alt=""
-                              />
-                            </div>
-                            <div style="width: 40px; height: 40px">
-                              <img
-                                src="./assets/imgs/main/image-14.jpg"
-                                class="img-fluid"
-                                alt=""
-                              />
-                            </div>
-                            <div style="width: 40px; height: 40px">
-                              <img
-                                src="./assets/imgs/main/image-15.jpg"
-                                class="img-fluid"
-                                alt=""
-                              />
-                            </div>
-                            <div style="width: 40px; height: 40px">
-                              <img
-                                src="./assets/imgs/main/image-16.jpg"
-                                class="img-fluid"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-8">
-                          <p class="mb-0 ms-3">Titolo dell'Album</p>
-                        </div>
-                      </div>
-                      <div
-                        class="col-12 col-lg-4 rounded-2 bg-tertiary d-flex flex-row align-items-center mt-3"
-                      >
-                        <div class="col-4">
-                          <img
-                            src="./assets/imgs/main/image-11.jpg"
-                            class="img-fluid rounded-2"
-                            style="height: 80px; width: 80px"
-                            alt=""
-                          />
-                        </div>
-                        <div class="col-8">
-                          <p class="mb-0 ms-3">Titolo dell'Album</p>
+                      <div class="row">
+                        <div class="col-12">
+                          <ol>
+                            <li class="">
+                              <div class="row align-items-center">
+                                <div class="col-6 d-flex">
+                                  <div>
+                                    <img
+                                      src="./assets/imgs/main/image-1.jpg"
+                                      alt="cover_song"
+                                      height="50px"
+                                      width="50px"
+                                    />
+                                  </div>
+                                  <div class="align-self-center">
+                                    <p class="m-0 ms-3">
+                                      <a
+                                        href="#"
+                                        class="text-light text-decoration-none"
+                                        >Nome Titolo</a
+                                      >
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="col-3">
+                                  <p class="mb-0 opacity-50">Numero Rank</p>
+                                </div>
+                                <div class="col-3">
+                                  <p class="mb-0 opacity-50">00:00</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ol>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="row px-lg-4 pt-2 justify-content-center">
-                    <div
-                      class="col-12 p-0 d-flex flex-wrap flex-lg-nowrap flex-row justify-content-around"
-                    >
-                      <div
-                        class="col-12 col-lg-4 rounded-2 me-3 bg-tertiary d-flex flex-row align-items-center mt-3"
-                      >
-                        <div class="col-4">
-                          <div
-                            class="d-flex flex-row flex-wrap"
-                            style="width: 80px; height: 80px"
-                          >
-                            <div style="width: 40px; height: 40px">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                class="img-fluid"
-                                alt=""
-                              />
-                            </div>
-                            <div style="width: 40px; height: 40px">
-                              <img
-                                src="./assets/imgs/main/image-14.jpg"
-                                class="img-fluid"
-                                alt=""
-                              />
-                            </div>
-                            <div style="width: 40px; height: 40px">
-                              <img
-                                src="./assets/imgs/main/image-15.jpg"
-                                class="img-fluid"
-                                alt=""
-                              />
-                            </div>
-                            <div style="width: 40px; height: 40px">
-                              <img
-                                src="./assets/imgs/main/image-16.jpg"
-                                class="img-fluid"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-8">
-                          <p class="mb-0 ms-3">Titolo dell'Album</p>
+                    <div class="col-4">
+                      <div class="row">
+                        <div class="col-12">
+                          <h4>Brani che ti piacciono:</h4>
                         </div>
                       </div>
-                      <div
-                        class="col-12 col-lg-4 rounded-2 me-3 bg-tertiary d-flex flex-row align-items-center mt-3"
-                      >
-                        <div class="col-4">
-                          <img
-                            src="./assets/imgs/main/image-11.jpg"
-                            class="img-fluid rounded-2"
-                            style="height: 80px; width: 80px"
-                            alt=""
-                          />
-                        </div>
-                        <div class="col-8">
-                          <p class="mb-0 ms-3">Titolo dell'Album</p>
-                        </div>
-                      </div>
-                      <div
-                        class="col-12 col-lg-4 rounded-2 bg-tertiary d-flex flex-row align-items-center mt-3"
-                      >
-                        <div class="col-4">
-                          <div
-                            class="d-flex flex-row flex-wrap"
-                            style="width: 80px; height: 80px"
-                          >
-                            <div style="width: 40px; height: 40px">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                class="img-fluid"
-                                alt=""
-                              />
-                            </div>
-                            <div style="width: 40px; height: 40px">
-                              <img
-                                src="./assets/imgs/main/image-14.jpg"
-                                class="img-fluid"
-                                alt=""
-                              />
-                            </div>
-                            <div style="width: 40px; height: 40px">
-                              <img
-                                src="./assets/imgs/main/image-15.jpg"
-                                class="img-fluid"
-                                alt=""
-                              />
-                            </div>
-                            <div style="width: 40px; height: 40px">
-                              <img
-                                src="./assets/imgs/main/image-16.jpg"
-                                class="img-fluid"
-                                alt=""
-                              />
-                            </div>
+                      <div class="row">
+                        <div class="col-12 d-flex">
+                          <div>
+                            <img
+                              src="./assets/imgs/main/image-1.jpg"
+                              class="rounded-circle"
+                              height="100px"
+                              width="100px"
+                              alt=""
+                            />
                           </div>
-                        </div>
-                        <div class="col-8">
-                          <p class="mb-0 ms-3">Titolo dell'Album</p>
+                          <div class="align-self-center ms-2">
+                            <p class="mb-1">
+                              Hai messo mi piace a <span></span> brani
+                            </p>
+                            <p class="mb-0 opacity-50 testoRightcard-1">
+                              di <span>Nome artista</span>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- ROW PLAYLIST "CREATE" DA SPOTIFY -->
-              <div class="row w-100">
-                <div class="spotifyPlaylists">
-                  <div>
-                    <div class="row mt-4 w-75">
-                      <h2 class="w-50">Altro di ciò che ti piace</h2>
-                    </div>
-                  </div>
-                  <div
-                    class="row row-cols-1 row-cols-lg-6 list justify-content-around"
-                  >
-                    <div class="col item">
-                      <img
-                        src="./assets/imgs/main/image-2.jpg"
-                        alt="Playlist Cover"
-                      />
-                      <div class="play"></div>
-                      <h4>Nome Playlist</h4>
-                      <p>Descrizione</p>
-                    </div>
-                    <div class="col item">
-                      <img
-                        src="./assets/imgs/main/image-2.jpg"
-                        alt="Playlist Cover"
-                      />
-                      <div class="play"></div>
-                      <h4>Nome Playlist</h4>
-                      <p>Descrizione</p>
-                    </div>
-                    <div class="col item">
-                      <img
-                        src="./assets/imgs/main/image-2.jpg"
-                        alt="Playlist Cover"
-                      />
-                      <div class="play"></div>
-                      <h4>Nome Playlist</h4>
-                      <p>Descrizione</p>
-                    </div>
-                    <div class="col item">
-                      <img
-                        src="./assets/imgs/main/image-2.jpg"
-                        alt="Playlist Cover"
-                      />
-                      <div class="play"></div>
-                      <h4>Nome Playlist</h4>
-                      <p>Descrizione</p>
-                    </div>
-                    <div class="col item mb-2">
-                      <img
-                        src="./assets/imgs/main/image-2.jpg"
-                        alt="Playlist Cover"
-                      />
-                      <div class="play"></div>
-                      <h4>Nome Playlist</h4>
-                      <p>Descrizione</p>
-                    </div>
-                    <div class="col item mb-2">
-                      <img
-                        src="./assets/imgs/main/image-2.jpg"
-                        alt="Playlist Cover"
-                      />
-                      <div class="play"></div>
-                      <h4>Nome Playlist</h4>
-                      <p>Descrizione</p>
-                    </div>
-                  </div>
-                </div>
+              <!-- ROW ALBUM ARTISTA -->
+              <div class="row w-100 d-none">
+                <div class="spotifyPlaylists"></div>
               </div>
             </div>
             <!--MAIN PART DEL SEARCH -->

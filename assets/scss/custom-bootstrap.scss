@@ -190,14 +190,20 @@ body {
     height: 85vh;
     }
   }
-} 
+  #sectionContentArtist {
+    height: 50.3vh;
+    @media screen and (min-width: 992px) {
+      height: 72vh;
+      }
+    } 
+  }
+ 
 
-#rowOverscroll {
+#rowOverscroll, #rowMusicOverScroll {
   height: auto;
-  #rowforGenarateCard {
+  #rowforGenarateCard, #rowforGenarateCardMusic{
     height: 68vh;
   }
-
   @media screen and (min-width: 992px) {
     height: 75vh
   }
@@ -453,4 +459,18 @@ section.player {
 
 .table-transparent {
     background-color: transparent !important;
+  }
+
+
+
+
+
+  //**** ARTIST PAGE******//
+  .imgBG {
+    background-image: url('../imgs/main/image-14.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 30%;
+    width: 100%;
   }

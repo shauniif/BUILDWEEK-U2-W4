@@ -12310,15 +12310,23 @@ body {
     height: 85vh;
   }
 }
+#main-section #sectionContentArtist {
+  height: 50.3vh;
+}
+@media screen and (min-width: 992px) {
+  #main-section #sectionContentArtist {
+    height: 72vh;
+  }
+}
 
-#rowOverscroll {
+#rowOverscroll, #rowMusicOverScroll {
   height: auto;
 }
-#rowOverscroll #rowforGenarateCard {
+#rowOverscroll #rowforGenarateCard, #rowOverscroll #rowforGenarateCardMusic, #rowMusicOverScroll #rowforGenarateCard, #rowMusicOverScroll #rowforGenarateCardMusic {
   height: 68vh;
 }
 @media screen and (min-width: 992px) {
-  #rowOverscroll {
+  #rowOverscroll, #rowMusicOverScroll {
     height: 75vh;
   }
 }
@@ -12574,4 +12582,13 @@ i.fa-step-backward {
 
 .table-transparent {
   background-color: transparent !important;
+}
+
+.imgBG {
+  background-image: url("../imgs/main/image-14.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 30%;
+  width: 100%;
 }/*# sourceMappingURL=custom-bootstrap.css.map */

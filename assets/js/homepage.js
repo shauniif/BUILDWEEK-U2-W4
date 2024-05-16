@@ -15,17 +15,28 @@ console.log('SEARCH INPUT', searchInput)
 searchbuttonIcon.addEventListener('click', function() {
     searchInput.classList.toggle('invisible');
     let inputText = document.getElementById('inputText')
+if(colForAdv, playListSearch, personalPlaylist,spotifyPlaylists, sectionContent) {
     colForAdv.classList.toggle('d-lg-block')
     playListSearch.classList.toggle('d-none')
     personalPlaylist.classList.toggle('d-none')
     spotifyPlaylists.classList.toggle('d-none');
-    rowforGenerateCard.classList.remove('d-none')
     sectionContent.classList.toggle('d-none')
+}
+    rowforGenerateCard.classList.remove('d-none')
     if (!searchInput.classList.contains('invisible')) {
         inputText.focus();
     }
 });
 
+let imgBG = document.getElementById('imgBG');
+let sectionContentArtist = document.getElementById('sectionContentArtist')
+if(imgBG){
+    searchbuttonIcon.addEventListener('click', function() {
+        imgBG.classList.toggle('imgBG')
+        sectionContentArtist.classList.toggle('d-none')
+        playListSearch.classList.toggle('d-none')
+    })
+}
 // CREARE LE CARD DEL SEARCH
 document.addEventListener('DOMContentLoaded', function() {
     // Array con i percorsi delle immagini
@@ -127,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { title: ``, img: 'assets/imgs/search/image-39.jpg' },
         { title: ``, img: 'assets/imgs/search/image-40.jpg' },
         { title: ``, img: 'assets/imgs/search/image-41.jpg' },
-         { title: ``, img: 'assets/imgs/search/image-42.png'},
+        { title: ``, img: 'assets/imgs/search/image-42.png'},
         { title: ``, img: 'assets/imgs/search/image-43.png' },
         { title: ``, img: 'assets/imgs/search/image-44.png' },
         { title: ``, img: 'assets/imgs/search/image-45.png' },
@@ -169,15 +180,20 @@ document.addEventListener('DOMContentLoaded', function() {
     createCard()
     
     let query;
-    let url;
-    searchInput.addEventListener("input", function() {
+    const initialUrl = `https://striveschool-api.herokuapp.com/api/deezer/search?q=`; 
+    let url = initialUrl
+  
     searchInput.addEventListener("keypress", function() {
         query = inputText.value
         console.log('Ricerca:', query)
-        researchSomething()
-        url = `https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`
+        url = initialUrl + query
         console.log(url)
-    })})
+        if(query.length >= 3) {
+            researchSomething()
+        }
+    })
+
+
     let rowforGenarateCardMusic = document.getElementById('rowforGenarateCardMusic')
     let createCardMusic = function(arrSongs) {
         if (rowforGenarateCardMusic.innerHTML.trim() !== '') {
@@ -254,9 +270,11 @@ xRightBar.addEventListener('click', function() {
 // COL PUBBLICITA' 
 let colAdv = document.getElementById('colAdv')
 let hideAdv = document.getElementById('hideAdv')
+if(hideAdv) {
 hideAdv.addEventListener('click', function() {
     colAdv.classList.add('d-none')
 })
+}
 
 
 // LI STILE
