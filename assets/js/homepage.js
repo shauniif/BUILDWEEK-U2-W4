@@ -207,17 +207,122 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="card-body text-light">
             <h5 class="card-title">${element.title}</h5>
             <p class="card-text">
-            <span></span> •
-            <a href="#" class="text-light">${element.artist.name}</a>
+            <a href="#" class="text-light">${element.album.title}</a> •
+            <a href="artist.html" class="text-light">${element.artist.name}</a>
             </p>
             </div>
             </div>
             </div>
             </div>
             </div>`
-            // rowforGenarateCardMusic.innerHTML = ''
         })
     }
+
+ let filtredArr = [];
+ let filtredArrAlbum = []
+let FiltredArrFuncAlbum = function(array, query) {
+    console.log('Valore di query:', query);
+   
+    const seen = new Set(); // Set per tenere traccia degli artisti già visti
+     filtredArrAlbum = array.filter(el => {
+        const name = el.album.title.toLowerCase();
+        const matchesQuery = name.includes(query.toLowerCase());
+        if (matchesQuery && !seen.has(name)) {
+            seen.add(name); // Aggiungi il nome dell'artista al set visto
+            return true;
+        }
+        return false;
+    });
+    
+    console.log('Array filtrato ALBUM', filtredArrAlbum);
+    createAlbum(filtredArrAlbum, query);
+}
+
+
+
+// FUNZIONE PER FILTARE GLI ALBUM
+let createAlbum = function(arrSongs) {
+    if (rowforGenarateCardMusic.innerHTML.trim() !== '') {
+        rowforGenarateCardMusic.innerHTML = '';
+    }
+
+    arrSongs.forEach((element) => {
+        rowforGenarateCardMusic.innerHTML +=`
+        <div class="col">
+        <div class="card bg-tertiary cforhover ms-4">
+        <img src="${element.album.cover_medium}" class="card-img-top rounded-circle" alt="Cover_Song" />
+        <a href="album.html" class="text-light">${element.album.title}</a>
+        <p>Album</p>
+        </p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>`
+    })
+
+}
+
+let albumFilter = document.getElementById('albumFilter');
+console.log(albumFilter)
+albumFilter.addEventListener('click', function(){
+    FiltredArrFuncAlbum(filtredArr, query)
+})
+// BUTTON "TUTTO"
+let AllNoFilt = this.getElementById('AllNoFilter') 
+AllNoFilt.addEventListener('click', function() {
+    researchSomething();
+})
+
+
+
+// FUNZIONE PER FILTARE GLI ARTISTI
+let FiltredArrFuncArtist = function(array, query) {
+    console.log('Valore di query:', query);
+   
+    const seen = new Set(); // Set per tenere traccia degli artisti già visti
+    const filtredArr = array.filter(el => {
+        const name = el.artist.name.toLowerCase();
+        const matchesQuery = name.includes(query.toLowerCase());
+        if (matchesQuery && !seen.has(name)) {
+            seen.add(name); // Aggiungi il nome dell'artista al set visto
+            return true;
+        }
+        return false;
+    });
+    
+    console.log('Array filtrato:', filtredArr);
+    createArtist(filtredArr, query);
+}
+ 
+let createArtist = function(arrSongs) {
+    if (rowforGenarateCardMusic.innerHTML.trim() !== '') {
+        rowforGenarateCardMusic.innerHTML = '';
+    }
+
+    arrSongs.forEach((element) => {
+        rowforGenarateCardMusic.innerHTML +=`
+        <div class="col">
+        <div class="card bg-tertiary cforhover ms-4">
+        <img src="${element.artist.picture_medium}" class="card-img-top rounded-circle" alt="Cover_Song" />
+        <a href="artist.html" class="text-light">${element.artist.name}</a>
+        <p>Artista</p>
+        </p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>`
+    })
+
+}
+let artistFilter = this.getElementById('artistFilter');
+artistFilter.addEventListener('click', function() {
+    FiltredArrFuncArtist(filtredArr, query)
+})
+
+
+
 let researchSomething = function() {
     fetch(url)
     .then((response) => {
@@ -229,8 +334,9 @@ let researchSomething = function() {
     }
     }) 
     .then((arr) => {
-    console.log('Risulato della ricerca:', arr.data) 
-    createCardMusic(arr.data)
+    console.log('Risulato della ricerca:', arr.data)
+    filtredArr = [...arr.data]
+    createCardMusic(filtredArr)
     })
     .catch((err) => {
         console.log('Errore durante la ricerca:', err)
