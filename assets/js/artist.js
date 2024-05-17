@@ -14,10 +14,18 @@ let createCardList = function(arraySongsofAnArtist) {
         Songrow.innerHTML += `
             <li class="mt-4 ">
                 <div class="row align-items-center">
-                    <div class="col-6 d-flex">
+                    <div class="col-8 col-lg-6 d-flex">
                         <div>
                             <img
                                 src="${element.album.cover_small}"
+                                data-src="${element.album.cover_small}"
+                                data-title="${element.title}" 
+                                data-artist="${element.artist.name}" 
+                                data-preview="${element.preview}" 
+                                data-title-short="${element.title_short}" 
+                                data-title-lg="${element.title}"
+                                data-album="${element.album.title}"
+                                onclick="takeElement(event)"
                                 alt="cover_song"
                                 height="50px"
                                 width="50px"
@@ -29,12 +37,10 @@ let createCardList = function(arraySongsofAnArtist) {
                             </p>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col col-lg-3 text-end">
                         <p class="mb-0 opacity-50">${element.rank}</p>
                     </div>
-                    <div class="col-3">
-                        <p class="mb-0 opacity-50">${element.duration}</p>
-                    </div>
+
                 </div>
             </li>`;
     }
@@ -58,7 +64,8 @@ let fetchSongs = function(fetchSongs) {
         console.log('ERRORE', err)
     })
 }
-
+let nameArtist = document.getElementById('nameArtist');
+console.log(nameArtist)
 let ModifyArtist = function(obj) {
     let nameArtist = document.getElementById('nameArtist');
     console.log(nameArtist)
@@ -85,7 +92,7 @@ let createArtist = function() {
         if(response.ok) {
             return response.json()
         } else {
-            throw new Error ('perché Dio è così stronzo?cit. Il primo Jojo')
+            throw new Error ('Errore')
         }
         
     })

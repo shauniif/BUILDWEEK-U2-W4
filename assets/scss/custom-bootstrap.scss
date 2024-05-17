@@ -182,20 +182,27 @@ body {
     border-color: #636363;
   }
 }
-
+#sectionContentAlbum {
+  background-color: #1db653;
+}
  
 
-#main-section, #rowOverscroll, #rowMusicOverScroll {
+#main-section, #rowOverscroll, #rowMusicOverScroll, #album__songBlock {
   height: auto;
-  #sectionContentArtist, #sectionContent, #rowforGenarateCard, #rowforGenarateCardMusic{
+  #sectionContent, #rowforGenarateCard, #rowforGenarateCardMusic, #album__songBlock {
     height: 60vh;
-
     @media screen and (min-width: 312px) {
       height: 65vh
     }
     @media screen and (min-width: 992px) {
       height: 75vh
     }
+  }
+  #sectionContentArtist {
+    height: 60vh;
+  }
+  #sectionContentAlbum{
+    height: 75vh;
   }
 }
 

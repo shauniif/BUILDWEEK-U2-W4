@@ -39,14 +39,24 @@ let sectionContentArtist = document.getElementById('sectionContentArtist')
 if(imgBG){
     searchbuttonIcon.addEventListener('click', function() {
         imgBG.classList.toggle('imgBG')
-    let InformationArtist = document.getElementById('InformationArtist')
-    InformationArtist.classList.toggle('d-none')
-    let navbar = document.getElementById('navbar')
+    let informationArtist = document.getElementById('informationArtist')
+        informationArtist.classList.toggle('d-none')
+        let navbar = document.getElementById('navbar')
+    console.log('clicc', navbar)
         navbar.classList.toggle('bg-black')
         sectionContentArtist.classList.toggle('d-none')
         playListSearch.classList.toggle('d-none')
         console.log('si sta togliendo')
     })
+}
+    
+    
+    let sectionContentAlbum = document.getElementById('sectionContentAlbum')
+    if(sectionContentAlbum) {
+        searchbuttonIcon.addEventListener('click', function() {
+        sectionContentAlbum.classList.toggle('d-none')
+        rowforGenerateCard.classList.toggle('d-none')
+        })
 }
 // Array con i percorsi delle immagini
 let ArrayGenresPlayList = [  
@@ -169,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         rowforGenerateCard.innerHTML += 
         ` 
     <div
-    class="col card bg-primary text-white rounded-3 overflow-hidden ms-4 p-0 my-3"
+    class="col-2 col-lg-6 card bg-primary text-white rounded-3 overflow-hidden ms-4 p-0 my-3"
     style="width: 200px; height: 200px"
     >
     <div
@@ -205,6 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
 
+    
     let rowforGenarateCardMusic = document.getElementById('rowforGenarateCardMusic')
     let createCardMusic = function(arrSongs) {
         if (rowforGenarateCardMusic.innerHTML.trim() !== '') {
@@ -214,11 +225,19 @@ document.addEventListener('DOMContentLoaded', function() {
             rowforGenarateCardMusic.innerHTML +=`
             <div class="col">
             <div class="card bg-tertiary cforhover ms-4">
-            <img src="${element.album.cover_medium}" class="card-img-top" alt="Cover_Song" />
+            <img src="${element.album.cover_medium}" class="card-img-top" alt="Cover_Song" 
+            data-src="${element.album.cover_medium}" 
+            data-title="${element.title}" 
+            data-artist="${element.artist.name}" 
+            data-preview="${element.preview}" 
+            data-title-short="${element.title_short}" 
+            data-title-lg="${element.title}"
+            data-album="${element.album.title}"
+            onclick="takeElement(event)"/>
             <div class="card-body text-light">
             <h5 class="card-title">${element.title}</h5>
             <p class="card-text">
-            <a href="#" class="text-light">${element.album.title}</a> •
+            <a href="album.html?q=${element.album.id}" class="text-light">${element.album.title}</a> •
             <a href="artist.html?q=${element.artist.id}" class="text-light">${element.artist.name}</a>
             </p>
             </div>
@@ -228,6 +247,56 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>`
         })
     }
+    takeElement = function(event) {
+        const img = event.target.getAttribute('data-src');
+        const title_short = event.target.getAttribute('data-title-short');
+        const title = event.target.getAttribute('data-title-lg');
+        const album = event.target.getAttribute('data-album');
+        const artist = event.target.getAttribute('data-artist');
+        const preview = event.target.getAttribute('data-preview');  
+        console.log('cliccato correttaMENTE', img, title_short, title, album, artist, preview)
+
+        populatePlayer(artist, title_short, title, preview, img)
+    }
+    const track_nameD = document.querySelector("#track-nameD")
+    console.log(track_nameD)
+    const populatePlayer = function (artist, title_short, title, preview, img) {
+        const artist_name = document.querySelector(".track-artist");
+        const track_name = document.querySelector(".track-name");
+        const track_nameD = document.querySelector("#track_nameD")
+        const audio = document.querySelector("audio");
+        const image = document.querySelector(".cover img");
+      
+        console.log("Dati ricevuti:", artist, title, preview, img);
+      
+        // Controlla se gli elementi sono stati trovati
+        if (!artist_name) {
+          console.error("Elemento con classe .track-artist non trovato");
+        }
+        if (!track_name) {
+          console.error("Elemento con classe .track-name non trovato");
+        }
+        if (!track_nameD) {
+          console.error("Elemento con classe #track-nameD non trovato");
+        }
+        if (!audio) {
+          console.error("Elemento <audio> non trovato");
+        }
+        if (!image) {
+          console.error("Elemento con classe .cover img non trovato");
+        }
+      
+        // Se tutti gli elementi sono trovati, aggiorna i loro contenuti
+        if (artist_name && track_name && audio && image) {
+          artist_name.innerText = artist;
+          track_name.innerText = title_short;
+          track_nameD.innerText = title;
+          console.log(track_name.innerText,"diocane");
+          audio.setAttribute("src", preview);
+          image.setAttribute("src", img);
+        }
+      };
+
 
  let filtredArr = [];
  let filtredArrAlbum = []
@@ -262,7 +331,7 @@ let createAlbum = function(arrSongs) {
         <div class="col">
         <div class="card bg-tertiary cforhover ms-4">
         <img src="${element.album.cover_medium}" class="card-img-top rounded-circle" alt="Cover_Song" />
-        <a href="album.html" class="text-light">${element.album.title}</a>
+        <a href="album.html?q=${element.album.id}" class="text-light">${element.album.title}</a>
         <p>Album</p>
         </p>
         </div>
@@ -419,3 +488,5 @@ allLiP.forEach((p, i) => {
 
 const playlistIMG = document.querySelectorAll('item img')
 console.log(playlistIMG)
+
+

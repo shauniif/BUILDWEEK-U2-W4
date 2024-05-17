@@ -88,7 +88,7 @@ e dell'immagine dell'album.*/
 /* Seleziona gli elementi del DOM che mostrano le informazioni dell'artista e del titolo della traccia
  utilizzando document.querySelector(".track-artist") e document.querySelector(".track-name").
 
-Seleziona l'elemento audio e l'elemento immagine dell'album utilizzando rispettivamente 
+Seleziona l'elemento audio e l'elemento immagine dell'album utilizzando ispettivamente 
 document.querySelector("audio") e document.querySelector(".cover img").
 
 Imposta il testo dell'elemento dell'artista con il nome dell'artista passato alla funzione (artist).
@@ -110,20 +110,25 @@ specifici per artist, title, preview, e img, questi valori vengono utilizzati pe
 
 /* playpauseTrack: Gestisce la riproduzione e la pausa della traccia audio. */
 const playpauseTrack = function () {
-  const play_pause_btn = document.querySelector(".playpause-track");
+  const play_pause_btn_MO = document.querySelector(".playpause-track");
+  const play_pause_btn_DE = document.querySelector(".playpause-track-DE");
 
  if (audio.paused) {
     audio.play();
-    play_pause_btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pause-circle-fill mx-2" viewBox="0 0 16 16">
+    play_pause_btn_MO.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pause-circle-fill mx-2" viewBox="0 0 16 16">
     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5zm3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5z"/>
   </svg>`;
+    play_pause_btn_DE.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pause-circle-fill mx-2" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5zm3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5z"/>`
     let updateTimer = setInterval(seekUpdate, 1000);
   } else {
     audio.pause();
 
-    play_pause_btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill mx-2" viewBox="0 0 16 16">
+    play_pause_btn_MO.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill mx-2" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>`;
+    play_pause_btn_DE.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill mx-2" viewBox="0 0 16 16">
   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
-</svg>`; 
+  </svg>`; 
   }
   console.log('Cliccato correttamente!')
 };

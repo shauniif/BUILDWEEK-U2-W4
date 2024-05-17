@@ -479,7 +479,7 @@
           <!-- MAIN SECTION-->
           <div class="col flex-row" id="main-section">
             <!-- NAV BAR MAIN SECTION -->
-            <div class="imgBG">
+            <div class="imgBG" id="imgBG">
               <div
                 class="navbar d-none d-lg-flex justify-content-space-between"
                 id="navbar"
@@ -596,7 +596,7 @@
                   </button>
                 </div>
               </div>
-              <div class="ms-3" id="InformationArtist">
+              <div class="ms-3" id="informationArtist">
                 <div class="mb-1">
                   <div>
                     <svg
@@ -674,7 +674,7 @@
               <div class="row ms-3 mt-4 w-75 justify-content-between">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-8">
+                    <div class="col-lg-8">
                       <div class="row">
                         <div class="col-12">
                           <h4>Popolari:</h4>
@@ -686,7 +686,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4">
                       <div class="row">
                         <div class="col-12">
                           <h4>Brani che ti piacciono:</h4>
@@ -727,10 +727,7 @@
             <div class="row d-none mt-3 gy-3" id="playListSearch">
               <div class="row w-100 overflow-y-scroll" id="rowOverscroll">
                 <div class="row ms-2"><h2>Sfoglia tutto</h2></div>
-                <div
-                  class="row row-cols-2 row-cols-lg-6 justify-content-center justify-content-lg-start d-none mt-0"
-                  id="rowforGenarateCard"
-                ></div>
+                <div class="row d-none" id="rowforGenarateCard"></div>
               </div>
             </div>
 
@@ -855,11 +852,11 @@
       <footer></footer>
     </main>
     <!-- Inizio section con player: MOBILE -->
-    <section class="d-md-none player">
+    <section class="d-lg-none player">
       <div class="details">
-        <!-- <div>
+        <div>
           <audio class="audio" src=".mp3" type="audio/mp3"></audio>
-        </div>-->
+        </div>
         <div class="col">
           <div class="track-name text-nowrap ms-3">
             titolo traccia traccia traccia
@@ -920,7 +917,7 @@
     <!-- Inizio section con player: DESKTOP -->
     <section class="d-none d-lg-block player">
       <div>
-        <!-- <audio class="audio" src=".mp3" type="audio/mp3"></audio> -->
+        <audio class="audio" src=".mp3" type="audio/mp3"></audio>
       </div>
       <div
         class="player d-flex flex-row justify-content-between align-items-center"
@@ -935,7 +932,7 @@
             />
           </div>
           <div class="col-6">
-            <div class="track-name">titolo traccia</div>
+            <div class="track-name" id="track_nameD">titolo traccia</div>
             <div class="track-artist">artista</div>
           </div>
           <div class="favorite">
@@ -985,7 +982,10 @@
                 />
               </svg>
             </div>
-            <div class="playpause-track" onclick="playpauseTrack()">
+            <div
+              class="playpause-track playpause-track-DE"
+              onclick="playpauseTrack()"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
