@@ -479,9 +479,9 @@
           <!-- MAIN SECTION-->
           <div class="col flex-row" id="main-section">
             <!-- NAV BAR MAIN SECTION -->
-            <div class="navbar d-none d-lg-flex justify-content-space-between">
+            <div class="navbar d-lg-flex justify-content-space-between">
               <div class="nav-left d-flex flex-row mt-3">
-                <button class="btn btn-tertiary rowsvg mt-1">
+                <button class="btn btn-tertiary rowsvg mt-1 d-none d-lg-block">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="28"
@@ -496,7 +496,9 @@
                     />
                   </svg>
                 </button>
-                <button class="btn btn-tertiary rowsvg mt-1 ms-2">
+                <button
+                  class="btn btn-tertiary d-none d-lg-block rowsvg mt-1 ms-2"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="28"
@@ -517,7 +519,7 @@
                       class="bi bi-search text-light align-self-center ps-2 mt-2"
                     ></i>
                     <input
-                      class="input-field bg-tertiary border border-0 text-light ps-4 rounded-5 mt-2"
+                      class="input-field bg-tertiary border border-0 text-light ps-4 rounded-5"
                       id="inputText"
                       type="text"
                       placeholder="Cosa vuoi ascoltare?"
@@ -525,7 +527,7 @@
                   </div>
                 </div>
               </div>
-              <div class="nav-right">
+              <div class="nav-right d-none d-lg-block">
                 <button class="nav-btn rounded-5 me-3 bg-light expandEP">
                   Esplora Premium
                 </button>
@@ -851,14 +853,13 @@
               </div>
               <!-- ROW PLAYLIST "CREATE" DA SPOTIFY -->
               <div class="row w-100">
-                <div class="spotifyPlaylists">
+                <div class="spotifyPlaylists mb-4 mb-lg-2">
                   <div>
-                    <div class="row mt-4 w-75">
-                      <h2 class="w-50">Altro di ciò che ti piace</h2>
-                    </div>
+                    <div class="row mt-4 w-100 w-lg-75"></div>
+                    <h2>Altro di ciò che ti piace</h2>
                   </div>
                   <div
-                    class="row row-cols-1 row-cols-lg-6 list justify-content-around"
+                    class="row row-cols-1 row-cols-4 row-cols-lg-6 list justify-content-around"
                   >
                     <div class="col item">
                       <img
@@ -871,7 +872,7 @@
                     </div>
                     <div class="col item">
                       <img
-                        src="./assets/imgs/main/image-2.jpg"
+                        src="./assets/imgs/main/image-3.jpg"
                         alt="Playlist Cover"
                       />
                       <div class="play"></div>
@@ -880,7 +881,7 @@
                     </div>
                     <div class="col item">
                       <img
-                        src="./assets/imgs/main/image-2.jpg"
+                        src="./assets/imgs/main/image-4.jpg"
                         alt="Playlist Cover"
                       />
                       <div class="play"></div>
@@ -889,7 +890,7 @@
                     </div>
                     <div class="col item">
                       <img
-                        src="./assets/imgs/main/image-2.jpg"
+                        src="./assets/imgs/main/image-5.jpg"
                         alt="Playlist Cover"
                       />
                       <div class="play"></div>
@@ -898,7 +899,7 @@
                     </div>
                     <div class="col item mb-2">
                       <img
-                        src="./assets/imgs/main/image-2.jpg"
+                        src="./assets/imgs/main/image-6.jpg"
                         alt="Playlist Cover"
                       />
                       <div class="play"></div>
@@ -907,7 +908,7 @@
                     </div>
                     <div class="col item mb-2">
                       <img
-                        src="./assets/imgs/main/image-2.jpg"
+                        src="./assets/imgs/main/image-7.jpg"
                         alt="Playlist Cover"
                       />
                       <div class="play"></div>
@@ -922,7 +923,10 @@
             <div class="row d-none mt-3 gy-3" id="playListSearch">
               <div class="row w-100 overflow-y-scroll" id="rowOverscroll">
                 <div class="row ms-2"><h2>Sfoglia tutto</h2></div>
-                <div class="row d-none" id="rowforGenarateCard"></div>
+                <div
+                  class="row row-cols-2 row-cols-lg-6 justify-content-center justify-content-lg-start d-none mt-0"
+                  id="rowforGenarateCard"
+                ></div>
               </div>
             </div>
 
@@ -953,7 +957,7 @@
                 </div>
                 <div class="row ms-1"><h2>Ricerche Rilevanti:</h2></div>
                 <div
-                  class="row row-cols-2 row-cols-lg-6"
+                  class="row row-cols-2 row-cols-lg-6 justify-content-center justify-content-lg-start"
                   id="rowforGenarateCardMusic"
                 ></div>
               </div>
@@ -1047,7 +1051,7 @@
       <footer></footer>
     </main>
     <!-- Inizio section con player: MOBILE -->
-    <section class="d-md-none player">
+    <section class="d-lg-none player">
       <div class="details">
         <!-- <div>
           <audio class="audio" src=".mp3" type="audio/mp3"></audio>

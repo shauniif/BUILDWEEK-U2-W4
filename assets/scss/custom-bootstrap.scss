@@ -182,30 +182,20 @@ body {
     border-color: #636363;
   }
 }
- #main-section {
-  height: auto;
-  #sectionContent {
-  height: 73.3vh;
-  @media screen and (min-width: 992px) {
-    height: 85vh;
-    }
-  }
-  #sectionContentArtist {
-    height: 50.3vh;
-    @media screen and (min-width: 992px) {
-      height: 72vh;
-      }
-    } 
-  }
+
  
 
-#rowOverscroll, #rowMusicOverScroll {
+#main-section, #rowOverscroll, #rowMusicOverScroll {
   height: auto;
-  #rowforGenarateCard, #rowforGenarateCardMusic{
-    height: 68vh;
-  }
-  @media screen and (min-width: 992px) {
-    height: 75vh
+  #sectionContentArtist, #sectionContent, #rowforGenarateCard, #rowforGenarateCardMusic{
+    height: 60vh;
+
+    @media screen and (min-width: 312px) {
+      height: 65vh
+    }
+    @media screen and (min-width: 992px) {
+      height: 75vh
+    }
   }
 }
 

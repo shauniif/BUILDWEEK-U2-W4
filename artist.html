@@ -479,9 +479,10 @@
           <!-- MAIN SECTION-->
           <div class="col flex-row" id="main-section">
             <!-- NAV BAR MAIN SECTION -->
-            <div class="imgBG" id="imgBG">
+            <div class="imgBG">
               <div
                 class="navbar d-none d-lg-flex justify-content-space-between"
+                id="navbar"
               >
                 <div class="nav-left d-flex flex-row mt-3">
                   <button class="btn btn-tertiary rowsvg mt-1">
@@ -595,7 +596,7 @@
                   </button>
                 </div>
               </div>
-              <div class="ms-3">
+              <div class="ms-3" id="InformationArtist">
                 <div class="mb-1">
                   <div>
                     <svg
@@ -726,7 +727,10 @@
             <div class="row d-none mt-3 gy-3" id="playListSearch">
               <div class="row w-100 overflow-y-scroll" id="rowOverscroll">
                 <div class="row ms-2"><h2>Sfoglia tutto</h2></div>
-                <div class="row d-none" id="rowforGenarateCard"></div>
+                <div
+                  class="row row-cols-2 row-cols-lg-6 justify-content-center justify-content-lg-start d-none mt-0"
+                  id="rowforGenarateCard"
+                ></div>
               </div>
             </div>
 

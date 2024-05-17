@@ -1,3 +1,6 @@
+
+
+
 const artistId = new URLSearchParams(location.search).get('q')
 console.log(artistId)
 

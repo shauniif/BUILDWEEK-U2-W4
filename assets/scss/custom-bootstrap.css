@@ -12299,34 +12299,19 @@ body {
   border-color: #636363;
 }
 
-#main-section {
+#main-section, #rowOverscroll, #rowMusicOverScroll {
   height: auto;
 }
-#main-section #sectionContent {
-  height: 73.3vh;
+#main-section #sectionContentArtist, #main-section #sectionContent, #main-section #rowforGenarateCard, #main-section #rowforGenarateCardMusic, #rowOverscroll #sectionContentArtist, #rowOverscroll #sectionContent, #rowOverscroll #rowforGenarateCard, #rowOverscroll #rowforGenarateCardMusic, #rowMusicOverScroll #sectionContentArtist, #rowMusicOverScroll #sectionContent, #rowMusicOverScroll #rowforGenarateCard, #rowMusicOverScroll #rowforGenarateCardMusic {
+  height: 60vh;
 }
-@media screen and (min-width: 992px) {
-  #main-section #sectionContent {
-    height: 85vh;
+@media screen and (min-width: 312px) {
+  #main-section #sectionContentArtist, #main-section #sectionContent, #main-section #rowforGenarateCard, #main-section #rowforGenarateCardMusic, #rowOverscroll #sectionContentArtist, #rowOverscroll #sectionContent, #rowOverscroll #rowforGenarateCard, #rowOverscroll #rowforGenarateCardMusic, #rowMusicOverScroll #sectionContentArtist, #rowMusicOverScroll #sectionContent, #rowMusicOverScroll #rowforGenarateCard, #rowMusicOverScroll #rowforGenarateCardMusic {
+    height: 65vh;
   }
 }
-#main-section #sectionContentArtist {
-  height: 50.3vh;
-}
 @media screen and (min-width: 992px) {
-  #main-section #sectionContentArtist {
-    height: 72vh;
-  }
-}
-
-#rowOverscroll, #rowMusicOverScroll {
-  height: auto;
-}
-#rowOverscroll #rowforGenarateCard, #rowOverscroll #rowforGenarateCardMusic, #rowMusicOverScroll #rowforGenarateCard, #rowMusicOverScroll #rowforGenarateCardMusic {
-  height: 68vh;
-}
-@media screen and (min-width: 992px) {
-  #rowOverscroll, #rowMusicOverScroll {
+  #main-section #sectionContentArtist, #main-section #sectionContent, #main-section #rowforGenarateCard, #main-section #rowforGenarateCardMusic, #rowOverscroll #sectionContentArtist, #rowOverscroll #sectionContent, #rowOverscroll #rowforGenarateCard, #rowOverscroll #rowforGenarateCardMusic, #rowMusicOverScroll #sectionContentArtist, #rowMusicOverScroll #sectionContent, #rowMusicOverScroll #rowforGenarateCard, #rowMusicOverScroll #rowforGenarateCardMusic {
     height: 75vh;
   }
 }
