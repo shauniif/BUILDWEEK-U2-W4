@@ -12326,6 +12326,10 @@ body {
   height: 75vh;
 }
 
+.volume_slider:hover {
+  background: #1dd25e;
+}
+
 /*************Right bar card***************/
 .testoRightcard-1 {
   font-size: 0.9em;
